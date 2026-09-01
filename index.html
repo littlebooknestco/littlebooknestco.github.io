@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Book Nest Co. | Pre-loved Books for Little Readers</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Georgia, "Times New Roman", serif;
+color: #3f4944;
+background: #faf7f0;
+line-height: 1.6;
+}
+
+header {
+background: #f4eee3;
+padding: 18px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #ddd5c7;
+}
+
+.logo {
+font-size: 25px;
+font-weight: bold;
+color: #52665d;
+}
+
+nav a {
+color: #3f4944;
+text-decoration: none;
+margin-left: 25px;
+font-size: 15px;
+}
+
+.hero {
+min-height: 520px;
+padding: 80px 7%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
+}
+
+.hero-text {
+max-width: 600px;
+}
+
+.eyebrow {
+color: #8b7561;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-size: 13px;
+margin-bottom: 15px;
+}
+
+h1 {
+font-size: clamp(42px, 6vw, 70px);
+line-height: 1.05;
+color: #46584f;
+margin-bottom: 22px;
+}
+
+.hero p {
+font-size: 19px;
+max-width: 520px;
+color: #68736d;
+margin-bottom: 30px;
+}
+
+.button {
+display: inline-block;
+background: #526b60;
+color: white;
+padding: 13px 25px;
+border-radius: 30px;
+text-decoration: none;
+margin-right: 10px;
+}
+
+.button.light {
+background: transparent;
+color: #526b60;
+border: 1px solid #526b60;
+}
+
+.hero-art {
+width: 360px;
+height: 360px;
+border-radius: 50%;
+background: #dfe8df;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 120px;
+}
+
+section {
+padding: 70px 7%;
+}
+
+.section-title {
+text-align: center;
+font-size: 35px;
+color: #46584f;
+margin-bottom: 12px;
+}
+
+.section-subtitle {
+text-align: center;
+color: #727b76;
+margin-bottom: 40px;
+}
+
+.categories {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+}
+
+.category {
+padding: 30px 18px;
+text-align: center;
+border-radius: 18px;
+background: white;
+border: 1px solid #e5dfd4;
+}
+
+.category .icon {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+.category h3 {
+color: #52665d;
+margin-bottom: 6px;
+}
+
+.category p {
+font-size: 14px;
+color: #777;
+}
+
+.about {
+background: #eee9de;
+text-align: center;
+}
+
+.about-content {
+max-width: 750px;
+margin: auto;
+}
+
+.about p {
+font-size: 18px;
+color: #626c67;
+margin-bottom: 18px;
+}
+
+.how {
+background: #faf7f0;
+}
+
+.steps {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 900px;
+margin: auto;
+}
+
+.step {
+text-align: center;
+padding: 25px;
+}
+
+.step-number {
+width: 48px;
+height: 48px;
+margin: auto auto 15px;
+border-radius: 50%;
+background: #d8e2d8;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #52665d;
+font-weight: bold;
+}
+
+.contact {
+background: #dfe8df;
+text-align: center;
+}
+
+.contact p {
+margin: 10px auto 25px;
+color: #59645e;
+}
+
+footer {
+background: #46584f;
+color: white;
+text-align: center;
+padding: 28px;
+font-size: 14px;
+}
+
+@media (max-width: 800px) {
+header {
+flex-direction: column;
+gap: 12px;
+}
+
+nav a {
+margin: 0 7px;
+font-size: 13px;
+}
+
+.hero {
+flex-direction: column;
+text-align: center;
+padding-top: 55px;
+}
+
+.hero-art {
+width: 250px;
+height: 250px;
+font-size: 80px;
+}
+
+.categories {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.steps {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 480px) {
+.categories {
+grid-template-columns: 1fr;
+}
+
+h1 {
+font-size: 45px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Little Book Nest Co.</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+<a href="#how">How It Works</a>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<div class="eyebrow">A little nest for big imaginations</div>
+
+<h1>Pre-loved books for little readers.</h1>
+
+<p>
+Carefully chosen children's books, ready to find their next little reader.
+Discover stories, adventures and new favourites without breaking the bank.
+</p>
+
+<a class="button" href="#shop">Browse Books</a>
+<a class="button light" href="#about">Our Story</a>
+</div>
+
+<div class="hero-art">📚</div>
+</section>
+
+
+<section id="shop">
+<h2 class="section-title">Find Their Next Favourite</h2>
+
+<p class="section-subtitle">
+Explore our little reading world by age.
+</p>
+
+<div class="categories">
+
+<div class="category">
+<div class="icon">🐣</div>
+<h3>Tiny Readers</h3>
+<p>0–2 years</p>
+</div>
+
+<div class="category">
+<div class="icon">🌸</div>
+<h3>Toddler Tales</h3>
+<p>2–4 years</p>
+</div>
+
+<div class="category">
+<div class="icon">⭐</div>
+<h3>Story Time Stars</h3>
+<p>4–6 years</p>
+</div>
+
+<div class="category">
+<div class="icon">🌿</div>
+<h3>Early Adventurers</h3>
+<p>6–8 years</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="about" id="about">
+
+<div class="about-content">
+
+<h2 class="section-title">Welcome to Our Little Nest</h2>
+
+<p>
+Little Book Nest Co. is a cosy little corner for families who believe
+every child deserves a shelf full of wonderful stories.
+</p>
+
+<p>
+We give pre-loved children's books another chance to be loved,
+read, shared and treasured by a new little reader.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="how" id="how">
+
+<h2 class="section-title">How It Works</h2>
+
+<p class="section-subtitle">
+Finding books should be simple.
+</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Explore</h3>
+<p>Browse our latest collection of pre-loved children's books.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Choose</h3>
+<p>Pick the stories your little reader will love.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Order</h3>
+<p>Place your order with us and we'll get your books ready.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<h2 class="section-title">Let's Find Some Stories</h2>
+
+<p>
+Have a question or want help choosing books?
+We'd love to hear from you.
+</p>
+
+<a class="button" href="https://wa.me/91XXXXXXXXXX">
+Order on WhatsApp
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+<p>© 2026 Little Book Nest Co. · Made with love for little readers 📚</p>
+</footer>
+
+</body>
+</html>
