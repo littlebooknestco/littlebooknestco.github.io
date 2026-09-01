@@ -7,6 +7,9 @@
 <title>Little Book Nest Co. | Pre-Loved Books</title>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
 *{
 box-sizing:border-box;
 margin:0;
@@ -18,96 +21,128 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Georgia,"Times New Roman",serif;
-background:#fbf6eb;
-color:#4d554d;
+background:#fbf5e9;
+color:#4e574e;
+font-family:'Quicksand',sans-serif;
 line-height:1.6;
 }
 
+h1,h2,h3{
+font-family:'DM Serif Display',serif;
+font-weight:400;
+}
+
+a{
+color:inherit;
+}
+
+
+/* ANNOUNCEMENT BAR */
+
+.announcement{
+background:#52645a;
+color:white;
+text-align:center;
+padding:9px 15px;
+font-size:12px;
+letter-spacing:.5px;
+}
+
+
+/* HEADER */
+
 header{
-background:#fbf6eb;
-border-bottom:1px solid #ddd3c3;
-padding:14px 6%;
+background:#fbf5e9;
+padding:18px 6%;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #e3d9c9;
 position:sticky;
 top:0;
 z-index:100;
 }
 
-.brand{
+.logo{
 display:flex;
 align-items:center;
 gap:12px;
 }
 
-.brand img{
-width:62px;
-height:62px;
+.logo img{
+width:72px;
+height:72px;
 object-fit:contain;
 }
 
-.brand-name{
-font-size:20px;
-font-weight:bold;
-color:#526258;
+.logo-text{
+font-family:'Playfair Display',serif;
+font-size:21px;
+color:#52645a;
 }
 
 nav{
 display:flex;
-gap:22px;
+align-items:center;
+gap:25px;
 }
 
 nav a{
 text-decoration:none;
-color:#526258;
 font-size:14px;
+color:#52645a;
 }
 
-nav a:hover{
-color:#a16d58;
+.nav-button{
+background:#52645a;
+color:white;
+padding:10px 18px;
+border-radius:25px;
 }
+
+
+/* HERO */
 
 .hero{
-min-height:600px;
+min-height:650px;
 padding:70px 7%;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:50px;
-background:
-radial-gradient(circle at 85% 30%,#e6eadb 0,transparent 28%),
-#fbf6eb;
+position:relative;
+overflow:hidden;
 }
 
 .hero-text{
-max-width:620px;
+max-width:600px;
 }
 
-.eyebrow{
+.small-title{
+color:#a66d58;
 text-transform:uppercase;
 letter-spacing:3px;
-color:#a16d58;
 font-size:12px;
+font-weight:700;
 margin-bottom:18px;
 }
 
 .hero h1{
-font-size:clamp(48px,7vw,78px);
-line-height:1.02;
-color:#4d5e53;
-margin-bottom:25px;
+font-size:clamp(50px,7vw,82px);
+line-height:1.03;
+color:#52645a;
+margin-bottom:22px;
 }
 
 .hero h1 span{
-color:#a16d58;
+color:#a66d58;
+font-style:italic;
 }
 
 .hero p{
-font-size:19px;
-color:#6b746c;
-max-width:540px;
+font-size:18px;
+max-width:520px;
+color:#69736c;
 margin-bottom:30px;
 }
 
@@ -119,182 +154,231 @@ flex-wrap:wrap;
 
 .button{
 display:inline-block;
-padding:13px 25px;
-border-radius:30px;
 text-decoration:none;
-background:#52675b;
+padding:14px 26px;
+border-radius:30px;
+background:#52645a;
 color:white;
+font-weight:600;
 font-size:14px;
 }
 
 .button.secondary{
 background:transparent;
-color:#52675b;
-border:1px solid #52675b;
+color:#52645a;
+border:1px solid #52645a;
 }
 
-.hero-logo{
-width:380px;
-height:380px;
+.hero-image{
+width:390px;
+height:390px;
+background:#e3eadc;
 border-radius:50%;
-background:#e3e9dc;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:35px;
+padding:30px;
 }
 
-.hero-logo img{
+.hero-image img{
 width:100%;
 height:100%;
 object-fit:contain;
 }
 
+
+/* GENERAL SECTIONS */
+
 section{
-padding:75px 7%;
+padding:80px 7%;
 }
 
 .section-title{
 text-align:center;
-color:#4d5e53;
-font-size:38px;
+font-size:42px;
+color:#52645a;
 margin-bottom:10px;
 }
 
 .section-subtitle{
 text-align:center;
-color:#777d77;
+color:#747b75;
 max-width:650px;
-margin:0 auto 40px;
+margin:0 auto 45px;
 }
 
-.shop-intro{
+
+/* AGE COLLECTIONS */
+
+.age-section{
 background:#fffdf8;
 }
 
-.collections{
+.age-grid{
+max-width:1100px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:18px;
-max-width:1100px;
-margin:auto;
 }
 
-.collection{
+.age-card{
+min-height:190px;
+padding:25px 18px;
+border-radius:24px;
 text-align:center;
-padding:28px 15px;
-border-radius:20px;
-border:1px solid #e4dbcd;
-background:#fff;
 text-decoration:none;
-color:#4d554d;
-transition:.2s;
+border:1px solid #e5dccd;
+transition:.25s;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-.collection:hover{
-transform:translateY(-4px);
-box-shadow:0 8px 20px rgba(70,70,50,.08);
+.age-card:hover{
+transform:translateY(-5px);
 }
 
-.collection .emoji{
+.age-icon{
 font-size:38px;
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
-.collection h3{
-color:#526258;
-margin-bottom:4px;
+.age-card h3{
+font-size:22px;
+color:#52645a;
 }
 
-.collection p{
+.age-card p{
 font-size:13px;
-color:#7b817c;
+color:#727a74;
 }
 
-.tiny{background:#edf5f1;}
-.toddler{background:#f9eeee;}
-.story{background:#fff7dc;}
-.adventure{background:#eaf0e4;}
+.card-one{
+background:#e5f0eb;
+}
 
-.growing{
+.card-two{
+background:#f8e8e9;
+}
+
+.card-three{
+background:#fff3ca;
+}
+
+.card-four{
+background:#e5eddf;
+}
+
+.card-five{
+background:#e8edf5;
+}
+
+.card-six{
+background:#f0e5ef;
+}
+
+.card-seven{
+background:#e5dfd2;
+}
+
+.card-eight{
+background:#f6e9d9;
+}
+
+
+/* SHOP BY TYPE */
+
+.type-section{
 background:#eee9de;
 }
 
 .type-grid{
+max-width:950px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
-max-width:850px;
-margin:auto;
 }
 
 .type-card{
-padding:30px;
-border-radius:20px;
 background:#fffdf8;
-border:1px solid #dfd5c6;
+padding:30px;
+border-radius:22px;
+border:1px solid #ded4c5;
 }
 
 .type-card h3{
-color:#526258;
-font-size:22px;
-margin-bottom:7px;
-}
-
-.type-card p{
-color:#727871;
-}
-
-.new{
-background:#fbf6eb;
-}
-
-.placeholder{
-max-width:850px;
-margin:auto;
-padding:45px;
-text-align:center;
-border:1px dashed #cfc4b3;
-border-radius:22px;
-background:#fffdf8;
-}
-
-.placeholder h3{
-color:#526258;
 font-size:25px;
+color:#52645a;
 margin-bottom:8px;
 }
 
-.placeholder p{
-color:#777d77;
+.type-card p{
+color:#707871;
+font-size:14px;
 }
+
+
+/* NEW BOOKS */
+
+.new-section{
+background:#fbf5e9;
+}
+
+.book-area{
+max-width:950px;
+margin:auto;
+background:#fffdf8;
+border:2px dashed #d5c9b7;
+border-radius:25px;
+padding:45px;
+text-align:center;
+}
+
+.book-area h3{
+font-size:27px;
+color:#52645a;
+margin-bottom:8px;
+}
+
+.book-area p{
+color:#777e78;
+}
+
+
+/* ABOUT */
 
 .about{
 background:#dfe8dc;
 }
 
 .about-content{
-max-width:800px;
+max-width:780px;
 margin:auto;
 text-align:center;
 }
 
 .about-content p{
+font-family:'Playfair Display',serif;
 font-size:18px;
 color:#5f6962;
 margin-bottom:18px;
 }
+
+
+/* HOW IT WORKS */
 
 .how{
 background:#fffdf8;
 }
 
 .steps{
+max-width:900px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
-max-width:900px;
-margin:auto;
 }
 
 .step{
@@ -302,26 +386,34 @@ text-align:center;
 }
 
 .step-number{
-width:52px;
-height:52px;
+width:55px;
+height:55px;
 margin:0 auto 15px;
 border-radius:50%;
-background:#dbe5d9;
-color:#526258;
+background:#dce7da;
 display:flex;
 align-items:center;
 justify-content:center;
+color:#52645a;
 font-weight:bold;
-font-size:18px;
 }
 
 .step h3{
-color:#526258;
-margin-bottom:6px;
+color:#52645a;
+font-size:24px;
+margin-bottom:7px;
 }
 
+.step p{
+color:#727972;
+font-size:14px;
+}
+
+
+/* WHATSAPP */
+
 .contact{
-background:#e6ddd0;
+background:#e8ddd0;
 text-align:center;
 }
 
@@ -332,24 +424,30 @@ color:#626a64;
 }
 
 .instagram{
-margin-top:18px;
-color:#526258;
-font-size:15px;
+margin-top:20px;
+font-weight:600;
+color:#52645a;
 }
 
+
+/* FOOTER */
+
 footer{
-background:#4d5e53;
+background:#52645a;
 color:white;
 text-align:center;
 padding:30px 15px;
 font-size:13px;
 }
 
+
+/* MOBILE */
+
 @media(max-width:850px){
 
 header{
 flex-direction:column;
-gap:10px;
+gap:12px;
 }
 
 nav{
@@ -364,10 +462,6 @@ text-align:center;
 padding-top:55px;
 }
 
-.hero-text{
-max-width:700px;
-}
-
 .hero p{
 margin-left:auto;
 margin-right:auto;
@@ -377,12 +471,12 @@ margin-right:auto;
 justify-content:center;
 }
 
-.hero-logo{
-width:280px;
-height:280px;
+.hero-image{
+width:290px;
+height:290px;
 }
 
-.collections{
+.age-grid{
 grid-template-columns:repeat(2,1fr);
 }
 
@@ -390,17 +484,18 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 max-width:500px;
 }
+
 }
 
 @media(max-width:500px){
 
-.brand-name{
-font-size:17px;
+.logo img{
+width:60px;
+height:60px;
 }
 
-.brand img{
-width:52px;
-height:52px;
+.logo-text{
+font-size:18px;
 }
 
 nav a{
@@ -408,49 +503,83 @@ font-size:12px;
 }
 
 .hero h1{
-font-size:46px;
+font-size:48px;
 }
 
 .hero p{
-font-size:17px;
+font-size:16px;
 }
 
-.collections,
+.section-title{
+font-size:34px;
+}
+
+.age-grid{
+grid-template-columns:1fr;
+}
+
 .type-grid{
 grid-template-columns:1fr;
 }
 
 section{
-padding:55px 6%;
+padding:60px 6%;
 }
 
-.section-title{
-font-size:31px;
 }
-}
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+📚 New books are added regularly · Order easily through WhatsApp
+</div>
+
+
+<!-- HEADER -->
 
 <header>
 
-<div class="brand">
-<img src="logo.jpg" alt="Little Book Nest Co. logo">
-<div class="brand-name">Little Book Nest Co.</div>
+<div class="logo">
+
+<img src="logo.png" alt="Little Book Nest Co.">
+
+<div class="logo-text">
+Little Book Nest Co.
 </div>
 
+</div>
+
+
 <nav>
+
 <a href="#home">Home</a>
+
 <a href="#shop">Shop</a>
+
 <a href="#about">Our Story</a>
+
 <a href="#how">How It Works</a>
-<a href="#contact">Contact</a>
+
+<a
+class="nav-button"
+href="https://wa.me/918004663110?text=Hi%20Little%20Book%20Nest%20Co.%21">
+WhatsApp
+</a>
+
 </nav>
 
 </header>
 
+
 <main>
+
 
 <!-- HERO -->
 
@@ -458,8 +587,8 @@ font-size:31px;
 
 <div class="hero-text">
 
-<div class="eyebrow">
-A little nest for every kind of reader
+<div class="small-title">
+A little nest for every reader
 </div>
 
 <h1>
@@ -468,23 +597,32 @@ Loved books.<br>
 </h1>
 
 <p>
-Discover carefully chosen pre-loved books for little readers,
-growing readers and readers of every age.
+Discover beautiful pre-loved books waiting to find
+their next reader — from tiny first stories to
+wonderful reads for grown-up young adults.
 </p>
 
 <div class="buttons">
-<a class="button" href="#shop">Shop the Nest</a>
 
-<a class="button secondary"
-href="https://wa.me/918004663110?text=Hi%20Little%20Book%20Nest%20Co.%21%20I%27d%20like%20help%20finding%20a%20book.">
-WhatsApp Us
+<a class="button" href="#shop">
+Shop the Nest
 </a>
-</div>
+
+<a
+class="button secondary"
+href="https://wa.me/918004663110?text=Hi%20Little%20Book%20Nest%20Co.%21%20I%27d%20like%20help%20finding%20a%20book.">
+Find a Book
+</a>
 
 </div>
 
-<div class="hero-logo">
-<img src="logo.jpg" alt="Little Book Nest Co.">
+</div>
+
+
+<div class="hero-image">
+
+<img src="logo.png" alt="Little Book Nest Co.">
+
 </div>
 
 </section>
@@ -492,66 +630,108 @@ WhatsApp Us
 
 <!-- SHOP BY AGE -->
 
-<section class="shop-intro" id="shop">
+<section class="age-section" id="shop">
 
 <h2 class="section-title">
-Find Their Next Favourite
+Shop by Age
 </h2>
 
 <p class="section-subtitle">
-Explore our nest by age, from first stories to books
-for grown-up young readers.
+From first little stories to books for readers
+discovering the world on their own.
 </p>
 
-<div class="collections">
 
-<a class="collection tiny" href="#">
-<div class="emoji">🐣</div>
+<div class="age-grid">
+
+
+<a href="#" class="age-card card-one">
+
+<div class="age-icon">🐣</div>
+
 <h3>Tiny Readers</h3>
+
 <p>0–2 years</p>
+
 </a>
 
-<a class="collection toddler" href="#">
-<div class="emoji">🌸</div>
+
+<a href="#" class="age-card card-two">
+
+<div class="age-icon">🌸</div>
+
 <h3>Toddler Tales</h3>
+
 <p>2–4 years</p>
+
 </a>
 
-<a class="collection story" href="#">
-<div class="emoji">⭐</div>
+
+<a href="#" class="age-card card-three">
+
+<div class="age-icon">⭐</div>
+
 <h3>Story Time Stars</h3>
+
 <p>4–6 years</p>
+
 </a>
 
-<a class="collection adventure" href="#">
-<div class="emoji">🌿</div>
+
+<a href="#" class="age-card card-four">
+
+<div class="age-icon">🌿</div>
+
 <h3>Early Adventurers</h3>
+
 <p>6–8 years</p>
+
 </a>
 
-<a class="collection adventure" href="#">
-<div class="emoji">📖</div>
+
+<a href="#" class="age-card card-five">
+
+<div class="age-icon">📖</div>
+
 <h3>Young Readers</h3>
+
 <p>8–12 years</p>
+
 </a>
 
-<a class="collection story" href="#">
-<div class="emoji">✨</div>
+
+<a href="#" class="age-card card-six">
+
+<div class="age-icon">✨</div>
+
 <h3>Teen Reads</h3>
+
 <p>13–17 years</p>
+
 </a>
 
-<a class="collection growing" href="#">
-<div class="emoji">💫</div>
+
+<a href="#" class="age-card card-seven">
+
+<div class="age-icon">💫</div>
+
 <h3>Young Adult</h3>
+
 <p>18+ years</p>
+
 </a>
 
-<a class="collection" href="#">
-<div class="emoji">🎁</div>
+
+<a href="#" class="age-card card-eight">
+
+<div class="age-icon">🎁</div>
+
 <h3>Book Bundles</h3>
+
 <p>Curated collections</p>
+
 </a>
+
 
 </div>
 
@@ -560,59 +740,90 @@ for grown-up young readers.
 
 <!-- SHOP BY TYPE -->
 
-<section class="growing">
+<section class="type-section">
 
 <h2 class="section-title">
-Shop by Type
+Explore by Type
 </h2>
 
 <p class="section-subtitle">
-Looking for a particular kind of story?
-Find your next pre-loved read here.
+Whether you're looking for a story or something
+to learn from, there's a little nest waiting.
 </p>
+
 
 <div class="type-grid">
 
+
 <div class="type-card">
+
 <h3>📚 Pre-Loved Fiction</h3>
+
 <p>
-Stories, novels and adventures waiting for their next reader.
+Stories, novels, adventures and characters
+waiting to be discovered again.
 </p>
+
 </div>
 
+
 <div class="type-card">
+
 <h3>🧠 Pre-Loved Non-Fiction</h3>
+
 <p>
-Books to learn, discover, understand and explore the world.
+Science, history, knowledge, learning,
+self-growth and everything curious minds love.
 </p>
+
 </div>
 
-<div class="type-card">
-<h3>🔎 Mystery & Thriller</h3>
-<p>
-Intrigue, suspense and stories that keep you turning pages.
-</p>
-</div>
 
 <div class="type-card">
+
 <h3>🧚 Fantasy & Adventure</h3>
+
 <p>
-Magical worlds, extraordinary journeys and unforgettable characters.
+Magical worlds, exciting journeys and
+unforgettable adventures.
 </p>
+
 </div>
 
+
 <div class="type-card">
+
+<h3>🔎 Mystery & Thriller</h3>
+
+<p>
+Suspenseful stories and page-turners
+for readers who love a mystery.
+</p>
+
+</div>
+
+
+<div class="type-card">
+
 <h3>❤️ Romance</h3>
+
 <p>
-Love stories for readers looking for their next favourite.
+Love stories for readers looking for
+their next favourite.
 </p>
+
 </div>
 
+
 <div class="type-card">
+
 <h3>📜 Classics</h3>
+
 <p>
-Much-loved stories that deserve another place on a bookshelf.
+Beloved stories that deserve another
+place on a bookshelf.
 </p>
+
 </div>
 
 </div>
@@ -622,7 +833,7 @@ Much-loved stories that deserve another place on a bookshelf.
 
 <!-- NEW ARRIVALS -->
 
-<section class="new">
+<section class="new-section">
 
 <h2 class="section-title">
 ✨ New in the Nest
@@ -632,14 +843,18 @@ Much-loved stories that deserve another place on a bookshelf.
 Freshly added books will appear here.
 </p>
 
-<div class="placeholder">
 
-<h3>Your newest books will live here.</h3>
+<div class="book-area">
+
+<h3>
+The shelves are getting ready...
+</h3>
 
 <p>
-We're getting the shelves ready.
-Soon you'll be able to browse our latest arrivals
-and order directly through WhatsApp.
+Our newest pre-loved books will appear here.
+Soon you'll be able to browse each book,
+see its condition and price, and order it
+directly through WhatsApp.
 </p>
 
 </div>
@@ -658,18 +873,19 @@ Welcome to Our Little Nest
 </h2>
 
 <p>
-Little Book Nest Co. is a cosy corner for readers
-who believe wonderful books deserve more than one life.
+Little Book Nest Co. is a cosy corner for
+readers who believe wonderful books deserve
+more than one life.
 </p>
 
 <p>
-We bring carefully chosen pre-loved books together
-with readers who are ready to give them a new home.
+We bring carefully chosen pre-loved books
+together with readers ready to give them
+a new home.
 </p>
 
 <p>
-From tiny first readers to grown-up young adults,
-there's always another story waiting to be discovered.
+Because every book has another story to tell.
 </p>
 
 </div>
@@ -689,45 +905,57 @@ How It Works
 Finding your next book should be simple.
 </p>
 
+
 <div class="steps">
+
 
 <div class="step">
 
-<div class="step-number">1</div>
+<div class="step-number">
+1
+</div>
 
 <h3>Explore</h3>
 
 <p>
-Browse our collection and find a book
-that catches your eye.
+Browse our latest collection of
+pre-loved books.
 </p>
 
 </div>
 
+
 <div class="step">
 
-<div class="step-number">2</div>
+<div class="step-number">
+2
+</div>
 
 <h3>Choose</h3>
 
 <p>
-Check the book details, condition and price.
+Pick the books your reader
+will love.
 </p>
 
 </div>
 
+
 <div class="step">
 
-<div class="step-number">3</div>
+<div class="step-number">
+3
+</div>
 
 <h3>WhatsApp Us</h3>
 
 <p>
-Send us your order and we'll take care
-of the rest.
+Send us your order and we'll
+take care of the rest.
 </p>
 
 </div>
+
 
 </div>
 
@@ -736,30 +964,36 @@ of the rest.
 
 <!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section class="contact">
 
 <h2 class="section-title">
 Let's Find Some Stories
 </h2>
 
 <p>
-Need help choosing a book or want to place an order?
-Come say hello.
+Have a question, looking for something specific,
+or ready to order?
 </p>
 
-<a class="button"
+
+<a
+class="button"
 href="https://wa.me/918004663110?text=Hi%20Little%20Book%20Nest%20Co.%21%20I%27d%20like%20to%20place%20an%20order.">
 Order on WhatsApp
 </a>
 
+
 <div class="instagram">
-Instagram: @littlebooknestco
+Instagram · @littlebooknestco
 </div>
 
 </section>
 
+
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -769,6 +1003,7 @@ Loved books. New adventures. 📚
 </p>
 
 </footer>
+
 
 </body>
 </html>
