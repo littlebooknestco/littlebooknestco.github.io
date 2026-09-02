@@ -1,1534 +1,2078 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Little Book Nest Co. | Loved Books, New Adventures</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Carefully chosen pre-loved books for little readers, growing readers, teens, young adults and curious minds of every age.">
+      content="Little Book Nest Co. — Carefully chosen pre-loved books for every kind of reader.">
 
-<!-- =========================
-     GOOGLE FONTS
-     ONLY 3 FONTS USED
-========================= -->
+<title>Little Book Nest Co. | Loved Books. New Adventures.</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- =========================================================
+     FONTS
+     1. DM Serif Display — headings
+     2. Caveat — handwritten accents
+     3. Poppins — navigation/body
+========================================================= -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
 
 
 <style>
 
-/* =====================================================
-   LITTLE BOOK NEST CO.
-   FINAL WEBSITE STYLES
-===================================================== */
-
-
-/* -------------------------
-   BRAND VARIABLES
-------------------------- */
+/* =========================================================
+   BRAND COLOURS
+========================================================= */
 
 :root {
 
-    --teal: #159c9b;
-    --teal-dark: #146b69;
-    --teal-soft: #dff4ef;
+  --teal: #159e9b;
+  --teal-dark: #176e6c;
 
-    --coral: #e86f67;
-    --coral-soft: #fde5e0;
+  --coral: #e86d69;
+  --coral-dark: #c95755;
 
-    --yellow: #f7ba3b;
-    --yellow-soft: #fff2c9;
+  --yellow: #f4b63f;
 
-    --green: #758f50;
-    --green-soft: #e8f0df;
+  --green: #6f8e4e;
 
-    --brown: #3d2b28;
-    --brown-soft: #70524b;
+  --brown: #332522;
 
-    --ink: #222426;
+  --cream: #fffdf8;
 
-    --white: #ffffff;
-    --off-white: #fbfaf6;
+  --white: #ffffff;
 
-    --line: #e8e4da;
+  --soft-green: #e7f5ed;
+  --soft-blue: #e5f5f5;
+  --soft-coral: #fff0ee;
+  --soft-yellow: #fff6dc;
+  --soft-lilac: #f4effb;
 
-    --shadow: 0 18px 50px rgba(43, 63, 54, 0.10);
+  --border: #e6ded3;
 
-    --radius-large: 32px;
-    --radius-medium: 22px;
-    --radius-small: 14px;
-
+  --shadow: 0 12px 35px rgba(45, 65, 55, 0.08);
 }
 
 
-/* -------------------------
+/* =========================================================
    RESET
-------------------------- */
+========================================================= */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--ink);
-    background: var(--off-white);
-    line-height: 1.6;
-    overflow-x: hidden;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #fffefa;
+
+  color: var(--brown);
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    font-family: inherit;
+  color: inherit;
 }
 
 
-/* =====================================================
-   TOP STRIP
-===================================================== */
+/* =========================================================
+   TOP BAR
+========================================================= */
 
-.top-strip {
-    background: #153f3d;
-    color: white;
-    min-height: 38px;
+.top-bar {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #173f3c;
 
-    font-size: 12px;
-    letter-spacing: 0.3px;
+  color: white;
+
+  font-size: 12px;
+
+  padding: 8px 20px;
+
+  letter-spacing: .1px;
 }
 
-.top-strip-inner {
-    width: min(1200px, 92%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
+.top-bar-inner {
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  position: relative;
 }
 
-.top-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    white-space: nowrap;
+.top-bar .dot {
+  opacity: .55;
 }
 
-.top-dot {
-    opacity: 0.65;
+.top-social {
+
+  position: absolute;
+
+  right: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.top-social a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.top-social svg {
+
+  width: 16px;
+
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+}
+
+.top-social .whatsapp-icon {
+
+  fill: currentColor;
+
+  stroke: none;
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* =========================================================
+   MAIN HEADER
+========================================================= */
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.main-header {
 
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
+  background: rgba(255,255,255,.96);
 
-    border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #eee7df;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
 }
 
 .header-inner {
-    width: min(1200px, 92%);
-    min-height: 86px;
-    margin: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1250px;
 
-    gap: 30px;
+  min-height: 92px;
+
+  margin: auto;
+
+  padding: 12px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
 }
 
 
-/* -------------------------
-   BRAND
-------------------------- */
+/* BRAND */
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
 
-    flex-shrink: 0;
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
 }
 
-.brand-logo {
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
+.brand img {
 
-    /* IMPORTANT:
-       No filter.
-       No opacity.
-       No teal overlay.
-       No mix-blend-mode.
-    */
+  width: 68px;
 
-    position: relative;
-    z-index: 2;
+  height: 68px;
+
+  object-fit: contain;
 }
 
 .brand-name {
-    font-family: "DM Serif Display", serif;
-    font-size: 22px;
-    line-height: 1.05;
 
-    color: var(--brown);
+  font-family: "DM Serif Display", serif;
 
-    max-width: 170px;
+  font-size: 23px;
+
+  line-height: 1.02;
+
+  color: #302320;
 }
 
 
-/* -------------------------
-   NAVIGATION
-------------------------- */
+/* NAVIGATION */
 
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.nav {
 
-    font-size: 13px;
-    font-weight: 600;
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  font-size: 13px;
+
+  font-weight: 600;
 }
 
-.main-nav a {
-    position: relative;
-    transition: color 0.2s ease;
+.nav a {
+
+  text-decoration: none;
+
+  color: #342a27;
+
+  transition: .2s ease;
 }
 
-.main-nav a:hover {
-    color: var(--teal);
-}
+.nav a:hover {
 
-.main-nav a::after {
-    content: "";
-    position: absolute;
-
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--teal);
-
-    transition: width 0.2s ease;
-}
-
-.main-nav a:hover::after {
-    width: 100%;
+  color: var(--teal);
 }
 
 
-/* -------------------------
-   WHATSAPP BUTTON
-------------------------- */
+/* WHATSAPP BUTTON */
 
 .whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    gap: 9px;
+  background: #25201f;
 
-    background: #153f3d;
-    color: white;
+  color: white !important;
 
-    padding: 12px 19px;
+  border-radius: 999px;
 
-    border-radius: 999px;
+  padding: 12px 19px;
 
-    font-size: 13px;
-    font-weight: 600;
+  display: inline-flex;
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+  align-items: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: .2s ease;
 }
 
 .whatsapp-button:hover {
-    background: var(--teal-dark);
-    transform: translateY(-2px);
+
+  background: var(--teal-dark);
+
+  transform: translateY(-1px);
+}
+
+.whatsapp-button svg {
+
+  width: 17px;
+
+  height: 17px;
+
+  fill: currentColor;
 }
 
 
-/* Official-style WhatsApp icon */
-
-.whatsapp-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-}
-
-
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
-    position: relative;
-    min-height: 650px;
 
-    display: flex;
-    align-items: center;
+  position: relative;
 
-    overflow: hidden;
+  min-height: 590px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #fcfdf9 55%,
-            #f7fbf6 100%
-        );
+  overflow: hidden;
+
+  background: #fffefa;
 }
 
 
-/* -------------------------
-   DECORATIVE CORNERS
-------------------------- */
+/* DECORATIVE CORNERS */
 
-.corner {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+
+  height: 260px;
+
+  left: -115px;
+
+  top: -125px;
+
+  background: var(--teal);
+
+  border-radius: 50%;
+
+  opacity: .96;
 }
 
-.corner-teal {
-    width: 245px;
-    height: 245px;
+.hero::after {
 
-    top: -125px;
-    left: -105px;
+  content: "";
 
-    background: var(--teal);
+  position: absolute;
 
-    border-radius: 50%;
-}
+  width: 180px;
 
-.corner-yellow {
-    width: 190px;
-    height: 190px;
+  height: 180px;
 
-    top: -105px;
-    right: -90px;
+  right: -80px;
 
-    background: var(--yellow);
+  top: -80px;
 
-    border-radius: 50%;
+  background: var(--yellow);
+
+  border-radius: 50%;
 }
 
 
-/* -------------------------
-   HERO CONTAINER
-------------------------- */
+/* HERO INNER */
 
 .hero-inner {
-    width: min(1200px, 92%);
-    margin: auto;
 
-    display: grid;
-    grid-template-columns: 1fr 0.9fr;
+  max-width: 1250px;
 
-    align-items: center;
+  min-height: 590px;
 
-    gap: 55px;
+  margin: auto;
 
-    position: relative;
-    z-index: 2;
+  padding: 72px 45px 65px;
 
-    padding: 75px 0;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  position: relative;
+
+  z-index: 2;
 }
 
 
-/* -------------------------
-   HERO TEXT
-------------------------- */
+/* SMALL LABEL */
 
-.hero-kicker {
-    font-size: 12px;
-    font-weight: 700;
+.eyebrow {
 
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
 
-    color: var(--teal-dark);
+  font-size: 12px;
 
-    margin-bottom: 20px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #195b59;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
 }
+
+
+/* HERO HEADING */
 
 .hero-title {
-    font-family: "DM Serif Display", serif;
 
-    font-size: clamp(60px, 6.2vw, 92px);
+  font-family: "DM Serif Display", serif;
 
-    line-height: 0.94;
+  font-weight: 400;
 
-    font-weight: 400;
+  font-size: clamp(62px, 6vw, 86px);
 
-    letter-spacing: -2px;
+  line-height: .94;
 
-    color: var(--brown);
+  letter-spacing: -2px;
 
-    margin-bottom: 24px;
+  margin-bottom: 25px;
+
+  color: var(--brown);
 }
 
 .hero-title .new {
-    color: var(--teal);
+
+  color: var(--teal);
 }
 
 .hero-title .adventures {
-    color: var(--coral);
+
+  color: var(--coral);
 }
 
 
-/* -------------------------
-   HANDWRITTEN LINE
-------------------------- */
+/* HANDWRITTEN LINE */
 
-.hero-handwritten {
-    font-family: "Caveat", cursive;
+.hero-script {
 
-    font-size: clamp(28px, 2.6vw, 40px);
+  font-family: "Caveat", cursive;
 
-    line-height: 1.15;
+  font-size: clamp(28px, 3vw, 38px);
 
-    color: #302c2a;
+  line-height: 1.05;
 
-    margin-bottom: 20px;
+  color: #2e2927;
 
-    max-width: 620px;
+  margin-bottom: 21px;
+
+  max-width: 600px;
 }
 
-.hero-heart {
-    color: var(--coral);
+.hero-script span {
+
+  color: var(--coral);
+
+  font-size: 1.1em;
 }
 
 
-/* -------------------------
-   DESCRIPTION
-------------------------- */
+/* DESCRIPTION */
 
 .hero-description {
-    max-width: 610px;
 
-    font-size: 15px;
+  max-width: 590px;
 
-    color: #686b68;
+  color: #655f5b;
 
-    line-height: 1.8;
+  font-size: 14px;
 
-    margin-bottom: 30px;
+  line-height: 1.8;
+
+  margin-bottom: 28px;
 }
 
 
-/* -------------------------
-   HERO BUTTONS
-------------------------- */
+/* BUTTONS */
 
 .hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 13px;
 
-    flex-wrap: wrap;
+  display: flex;
 
-    margin-bottom: 28px;
+  gap: 12px;
+
+  flex-wrap: wrap;
 }
 
 .primary-button,
 .secondary-button {
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
 
-    gap: 9px;
+  align-items: center;
 
-    padding: 14px 22px;
+  justify-content: center;
 
-    border-radius: 999px;
+  padding: 13px 22px;
 
-    font-size: 13px;
-    font-weight: 600;
+  border-radius: 999px;
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: .2s ease;
 }
 
 .primary-button {
-    background: var(--teal);
-    color: white;
+
+  background: var(--teal);
+
+  color: white;
+
+  border: 2px solid var(--teal);
 }
 
 .primary-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 9px 22px rgba(21,156,155,0.25);
+
+  background: var(--teal-dark);
+
+  border-color: var(--teal-dark);
+
+  transform: translateY(-2px);
 }
 
 .secondary-button {
-    background: white;
-    color: var(--teal-dark);
 
-    border: 1.5px solid var(--teal);
+  border: 2px solid #8ab5b2;
+
+  color: #245c59;
+
+  background: white;
 }
 
 .secondary-button:hover {
-    background: var(--teal-soft);
-    transform: translateY(-2px);
+
+  background: var(--soft-green);
 }
 
 
-/* -------------------------
-   HERO VALUES
-------------------------- */
+/* HERO FEATURES */
 
-.hero-values {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
+.hero-features {
 
-    font-size: 11px;
-    color: #6d716e;
+  display: flex;
+
+  gap: 22px;
+
+  margin-top: 26px;
+
+  font-size: 11px;
+
+  color: #615b56;
+
+  flex-wrap: wrap;
 }
 
-.hero-value {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.hero-feature {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
 }
 
-.value-heart {
-    color: var(--coral);
+.hero-feature .heart {
+
+  color: var(--coral);
 }
 
-.value-book {
-    color: var(--teal);
+.hero-feature .book {
+
+  color: var(--teal);
 }
 
-.value-leaf {
-    color: var(--green);
+.hero-feature .leaf {
+
+  color: var(--green);
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO LOGO AREA
-===================================================== */
+========================================================= */
 
-.hero-art {
-    position: relative;
+.hero-visual {
 
-    min-height: 500px;
+  position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 
-/* 
-   THE DECORATIVE HALO IS COMPLETELY SEPARATE
-   FROM THE LOGO.
-
-   Therefore it can NEVER tint the logo.
+/*
+IMPORTANT:
+The coloured shapes are BEHIND the logo.
+They do NOT overlap the logo itself.
 */
 
-.logo-halo {
-    position: absolute;
+.logo-decor {
 
-    width: 440px;
-    height: 440px;
+  position: absolute;
 
-    border-radius: 50%;
+  width: 410px;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(21,156,155,0.22) 0%,
-            rgba(21,156,155,0.14) 38%,
-            rgba(21,156,155,0.06) 64%,
-            rgba(21,156,155,0) 76%
-        );
+  height: 410px;
 
-    transform: translate(30px, 8px);
+  border-radius: 50%;
 
-    z-index: 0;
+  background: #e7f5ed;
+
+  transform: translate(12px, 8px);
+
+  z-index: 0;
 }
 
 
-/* IMPORTANT:
-   actual logo sits above the halo */
+/* separate decorative blobs */
+
+.logo-blob-one {
+
+  position: absolute;
+
+  width: 105px;
+
+  height: 105px;
+
+  background: #bde4dd;
+
+  border-radius: 50%;
+
+  right: 38px;
+
+  top: 48px;
+
+  z-index: 0;
+}
+
+.logo-blob-two {
+
+  position: absolute;
+
+  width: 75px;
+
+  height: 75px;
+
+  background: #fff0bb;
+
+  border-radius: 50%;
+
+  left: 70px;
+
+  bottom: 45px;
+
+  z-index: 0;
+}
+
+
+/* ACTUAL LOGO */
 
 .hero-logo {
-    width: min(455px, 82%);
 
-    height: auto;
+  width: min(430px, 90%);
 
-    object-fit: contain;
+  position: relative;
 
-    position: relative;
-    z-index: 3;
+  z-index: 3;
 
-    filter: none;
+  object-fit: contain;
 
-    mix-blend-mode: normal;
+  filter: none;
 
-    transform: translateY(3px);
-
-    transition: transform 0.3s ease;
-}
-
-.hero-logo:hover {
-    transform: translateY(-3px);
+  box-shadow: none;
 }
 
 
-/* -------------------------
-   HERO DECORATIONS
-------------------------- */
+/* FLOATING DECOR */
 
-.decor {
-    position: absolute;
-    z-index: 4;
-    pointer-events: none;
+.decor-heart-one {
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 75px;
+
+  color: #c9514d;
+
+  font-size: 28px;
+
+  z-index: 4;
 }
 
-.decor-heart {
-    color: var(--coral);
-    font-size: 28px;
+.decor-heart-two {
+
+  position: absolute;
+
+  left: 60px;
+
+  top: 145px;
+
+  color: #e67a69;
+
+  font-size: 20px;
+
+  z-index: 4;
 }
 
 .decor-star {
-    color: var(--yellow);
-    font-size: 23px;
-}
 
-.decor-small {
-    color: var(--green);
-    font-size: 19px;
-}
+  position: absolute;
 
-.heart-one {
-    top: 95px;
-    right: 8%;
-}
+  right: 85px;
 
-.heart-two {
-    bottom: 95px;
-    left: 6%;
-}
+  bottom: 80px;
 
-.star-one {
-    top: 145px;
-    left: 4%;
-}
+  color: #d9a333;
 
-.star-two {
-    bottom: 65px;
-    right: 10%;
-}
+  font-size: 22px;
 
-.leaf-one {
-    top: 115px;
-    left: 8%;
-}
-
-.leaf-two {
-    bottom: 110px;
-    right: 5%;
+  z-index: 4;
 }
 
 
-/* =====================================================
-   SHOP BY AGE
-===================================================== */
+/* =========================================================
+   SECTION COMMON
+========================================================= */
 
-.age-section {
-    background: white;
+.section {
 
-    padding: 90px 0;
+  padding: 85px 25px;
 }
 
-.section-container {
-    width: min(1200px, 92%);
-    margin: auto;
+.section-inner {
+
+  max-width: 1200px;
+
+  margin: auto;
 }
 
 .section-heading {
-    text-align: center;
 
-    margin-bottom: 45px;
+  text-align: center;
+
+  margin-bottom: 45px;
 }
 
-.section-kicker {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.section-heading h2 {
 
-    color: var(--teal-dark);
+  font-family: "DM Serif Display", serif;
 
-    font-weight: 700;
+  font-weight: 400;
 
-    margin-bottom: 10px;
+  font-size: clamp(42px, 5vw, 60px);
+
+  color: var(--brown);
+
+  line-height: 1;
 }
 
-.section-title {
-    font-family: "DM Serif Display", serif;
+.section-heading p {
 
-    font-size: clamp(40px, 4vw, 58px);
+  margin-top: 12px;
 
-    font-weight: 400;
+  color: #716a65;
 
-    color: var(--brown);
-
-    line-height: 1.05;
-
-    margin-bottom: 10px;
-}
-
-.section-subtitle {
-    color: #777a77;
-    font-size: 14px;
+  font-size: 14px;
 }
 
 
-/* -------------------------
-   AGE GRID
-------------------------- */
+/* =========================================================
+   SHOP BY AGE
+========================================================= */
+
+.age-section {
+
+  background: linear-gradient(
+    135deg,
+    #f0fbf7 0%,
+    #fffaf0 50%,
+    #fff3f1 100%
+  );
+}
 
 .age-grid {
-    display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+  display: grid;
 
-    gap: 18px;
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 13px;
 }
 
 .age-card {
-    min-height: 210px;
 
-    padding: 25px 16px;
+  min-height: 190px;
 
-    border-radius: 28px;
+  border-radius: 25px;
 
-    display: flex;
-    flex-direction: column;
+  padding: 20px 12px;
 
-    align-items: center;
-    justify-content: center;
+  display: flex;
 
-    text-align: center;
+  flex-direction: column;
 
-    border: 1px solid rgba(0,0,0,0.05);
+  align-items: center;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,.9);
+
+  transition: .25s ease;
+
+  text-decoration: none;
 }
 
 .age-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
+
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow);
 }
 
 .age-card:nth-child(1) {
-    background: var(--teal-soft);
+  background: #e4f6ed;
 }
 
 .age-card:nth-child(2) {
-    background: #fde7ec;
+  background: #ffe9ef;
 }
 
 .age-card:nth-child(3) {
-    background: var(--yellow-soft);
+  background: #fff1bf;
 }
 
 .age-card:nth-child(4) {
-    background: var(--green-soft);
+  background: #e8f4d8;
 }
 
 .age-card:nth-child(5) {
-    background: #e3f0f7;
+  background: #dceefa;
 }
 
 .age-card:nth-child(6) {
-    background: #eee5f7;
+  background: #f0e7fa;
 }
 
 .age-card:nth-child(7) {
-    background: #fce9dc;
-}
-
-.age-card:nth-child(8) {
-    background: #edf1dc;
+  background: #fff0dc;
 }
 
 .age-icon {
-    font-size: 42px;
-    margin-bottom: 13px;
+
+  font-size: 48px;
+
+  margin-bottom: 10px;
 }
 
-.age-name {
-    font-family: "DM Serif Display", serif;
+.age-card h3 {
 
-    font-size: 21px;
+  font-family: "DM Serif Display", serif;
 
-    color: var(--brown);
+  font-size: 20px;
 
-    margin-bottom: 3px;
+  font-weight: 400;
+
+  line-height: 1.1;
 }
 
-.age-years {
-    font-size: 11px;
-    color: #676b68;
+.age-card p {
+
+  font-size: 11px;
+
+  color: #665e59;
+
+  margin-top: 4px;
 }
 
 
-/* =====================================================
-   SHOP SECTION
-===================================================== */
+/* =========================================================
+   BOOK TYPE
+========================================================= */
+
+.type-section {
+
+  background: white;
+}
+
+.type-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.type-card {
+
+  padding: 32px 25px;
+
+  border-radius: 24px;
+
+  text-decoration: none;
+
+  border: 1px solid var(--border);
+
+  transition: .2s ease;
+
+  background: #fff;
+}
+
+.type-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow);
+}
+
+.type-card:nth-child(1) {
+  border-top: 5px solid var(--teal);
+}
+
+.type-card:nth-child(2) {
+  border-top: 5px solid var(--coral);
+}
+
+.type-card:nth-child(3) {
+  border-top: 5px solid var(--yellow);
+}
+
+.type-card:nth-child(4) {
+  border-top: 5px solid var(--green);
+}
+
+.type-card .type-icon {
+
+  font-size: 35px;
+
+  margin-bottom: 14px;
+}
+
+.type-card h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: 27px;
+}
+
+.type-card p {
+
+  font-size: 12px;
+
+  color: #756d68;
+
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   SHOP
+========================================================= */
 
 .shop-section {
-    padding: 100px 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f4fbf7,
-            #ffffff
-        );
+  background: #f7fbf8;
 }
 
-.shop-intro {
-    max-width: 650px;
-    margin: 0 auto 45px;
+.shop-controls {
 
-    text-align: center;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+
+  flex-wrap: wrap;
 }
 
-.shop-placeholder {
-    border: 2px dashed #c7d9d1;
+.search-box {
 
-    border-radius: 30px;
+  flex: 1;
 
-    background: white;
+  min-width: 230px;
 
-    min-height: 260px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 40px;
+  position: relative;
 }
 
-.shop-placeholder-inner {
-    max-width: 600px;
+.search-box input {
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: 1px solid #dcd6cf;
+
+  border-radius: 999px;
+
+  background: white;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 13px;
+
+  outline: none;
 }
 
-.shop-placeholder h3 {
-    font-family: "DM Serif Display", serif;
+.search-box input:focus {
 
-    font-size: 34px;
-
-    color: var(--brown);
-
-    margin-bottom: 12px;
+  border-color: var(--teal);
 }
 
-.shop-placeholder p {
-    font-size: 14px;
-    color: #747874;
+.filter-buttons {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.filter-button {
+
+  border: 1px solid #d9d1ca;
+
+  background: white;
+
+  border-radius: 999px;
+
+  padding: 9px 15px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.filter-button.active {
+
+  background: var(--teal);
+
+  border-color: var(--teal);
+
+  color: white;
 }
 
 
-/* =====================================================
-   BRAND STORY
-===================================================== */
+/* BOOK GRID */
+
+.book-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.book-card {
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 1px solid #e9e2da;
+
+  transition: .25s ease;
+}
+
+.book-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow);
+}
+
+.book-image {
+
+  aspect-ratio: 4 / 5;
+
+  background: #f0eee9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.book-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.book-placeholder {
+
+  font-size: 45px;
+
+  opacity: .45;
+}
+
+.book-info {
+
+  padding: 18px;
+}
+
+.book-info h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: 22px;
+
+  line-height: 1.15;
+}
+
+.book-author {
+
+  font-size: 11px;
+
+  color: #7a716b;
+
+  margin: 4px 0 10px;
+}
+
+.book-meta {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  align-items: center;
+
+  margin-bottom: 13px;
+}
+
+.book-price {
+
+  font-weight: 700;
+
+  color: var(--teal-dark);
+
+  font-size: 15px;
+}
+
+.book-tag {
+
+  font-size: 9px;
+
+  background: #edf5ee;
+
+  color: #47704c;
+
+  border-radius: 999px;
+
+  padding: 4px 8px;
+}
+
+.order-book {
+
+  display: block;
+
+  text-align: center;
+
+  background: var(--coral);
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  padding: 10px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.order-book:hover {
+
+  background: var(--coral-dark);
+}
+
+.no-books {
+
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 50px;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   NEW IN
+========================================================= */
+
+.new-section {
+
+  background: linear-gradient(
+    120deg,
+    #fff7e0,
+    #fff1f0
+  );
+}
+
+.new-inner {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.new-copy h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(45px, 5vw, 65px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.new-copy h2 span {
+
+  color: var(--coral);
+}
+
+.new-copy p {
+
+  margin: 18px 0 25px;
+
+  color: #665e59;
+
+  font-size: 14px;
+
+  max-width: 500px;
+}
+
+.new-art {
+
+  min-height: 300px;
+
+  border-radius: 40px;
+
+  background: #e3f5ed;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 100px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.new-art::before {
+
+  content: "";
+
+  width: 180px;
+
+  height: 180px;
+
+  background: #f6c84c;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  right: -50px;
+
+  top: -50px;
+}
+
+.new-art::after {
+
+  content: "";
+
+  width: 150px;
+
+  height: 150px;
+
+  background: #f29a91;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: -50px;
+
+  bottom: -50px;
+}
+
+.new-art span {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   OUR STORY
+========================================================= */
 
 .story-section {
-    background: white;
 
-    padding: 100px 0;
+  background: white;
 }
 
 .story-grid {
-    display: grid;
 
-    grid-template-columns:
-        0.9fr 1.1fr;
+  display: grid;
 
-    gap: 70px;
+  grid-template-columns: 1fr 1fr;
 
-    align-items: center;
-}
+  gap: 60px;
 
-.story-logo-box {
-    position: relative;
-
-    min-height: 400px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.story-logo-bg {
-    position: absolute;
-
-    width: 340px;
-    height: 340px;
-
-    background: var(--yellow-soft);
-
-    border-radius: 50%;
-}
-
-.story-logo {
-    width: 300px;
-
-    position: relative;
-    z-index: 2;
+  align-items: center;
 }
 
 .story-copy h2 {
-    font-family: "DM Serif Display", serif;
 
-    font-size: clamp(42px, 4vw, 58px);
+  font-family: "DM Serif Display", serif;
 
-    font-weight: 400;
+  font-size: clamp(45px, 5vw, 65px);
 
-    color: var(--brown);
+  font-weight: 400;
 
-    line-height: 1.05;
-
-    margin-bottom: 20px;
+  line-height: 1;
 }
 
 .story-copy h2 span {
-    color: var(--teal);
+
+  color: var(--teal);
 }
 
 .story-copy p {
-    color: #686d69;
 
-    font-size: 15px;
+  margin-top: 18px;
 
-    line-height: 1.9;
+  font-size: 14px;
 
-    margin-bottom: 18px;
+  color: #6d6661;
+
+  line-height: 1.9;
+}
+
+.story-note {
+
+  margin-top: 22px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 30px;
+
+  color: var(--coral);
+}
+
+.story-box {
+
+  background: #f2faf5;
+
+  border-radius: 35px;
+
+  padding: 45px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.story-box::before {
+
+  content: "♡";
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 10px;
+
+  font-size: 80px;
+
+  color: rgba(21,158,155,.12);
+}
+
+.story-box h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+}
+
+.story-box ul {
+
+  list-style: none;
+
+  margin-top: 20px;
+}
+
+.story-box li {
+
+  padding: 9px 0;
+
+  font-size: 13px;
+
+  border-bottom: 1px dashed #cbded5;
 }
 
 
-/* =====================================================
+/* =========================================================
    HOW IT WORKS
-===================================================== */
+========================================================= */
 
 .how-section {
-    padding: 100px 0;
 
-    background: var(--teal-soft);
+  background: linear-gradient(
+    135deg,
+    #e9f7f4,
+    #fff8e8
+  );
 }
 
-.steps-grid {
-    display: grid;
+.steps {
 
-    grid-template-columns:
-        repeat(3, 1fr);
+  display: grid;
 
-    gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
 }
 
-.step-card {
-    background: white;
+.step {
 
-    padding: 35px 28px;
+  background: white;
 
-    border-radius: 25px;
+  border-radius: 25px;
 
-    text-align: center;
+  padding: 30px;
 
-    border: 1px solid rgba(21,156,155,0.08);
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,.8);
 }
 
 .step-number {
-    width: 46px;
-    height: 46px;
 
-    border-radius: 50%;
+  width: 46px;
 
-    background: var(--teal);
+  height: 46px;
 
-    color: white;
+  margin: 0 auto 15px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
 
-    margin: 0 auto 18px;
+  background: var(--teal);
 
-    font-weight: 700;
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
 }
 
-.step-card h3 {
-    font-family: "DM Serif Display", serif;
+.step h3 {
 
-    font-size: 26px;
+  font-family: "DM Serif Display", serif;
 
-    color: var(--brown);
+  font-weight: 400;
 
-    margin-bottom: 10px;
+  font-size: 25px;
 }
 
-.step-card p {
-    font-size: 13px;
-    color: #727672;
+.step p {
+
+  font-size: 12px;
+
+  color: #716963;
+
+  margin-top: 8px;
 }
 
 
-/* =====================================================
-   CONTACT / FIND A STORY
-===================================================== */
+/* =========================================================
+   CONTACT / WHATSAPP
+========================================================= */
 
 .contact-section {
-    padding: 100px 0;
 
-    background: white;
+  padding: 80px 25px;
 
-    text-align: center;
+  background: #173f3c;
+
+  color: white;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
-.contact-box {
-    max-width: 850px;
+.contact-section::before {
 
-    margin: auto;
+  content: "";
 
-    background:
-        linear-gradient(
-            135deg,
-            #e4f6f1,
-            #fff3e9
-        );
+  width: 300px;
 
-    border-radius: 35px;
+  height: 300px;
 
-    padding: 65px 30px;
+  background: var(--teal);
 
-    position: relative;
+  opacity: .25;
 
-    overflow: hidden;
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: -120px;
+
+  top: -130px;
 }
 
-.contact-box::before {
-    content: "";
+.contact-section h2 {
 
-    position: absolute;
+  font-family: "DM Serif Display", serif;
 
-    width: 180px;
-    height: 180px;
+  font-size: clamp(45px, 5vw, 65px);
 
-    background: rgba(21,156,155,0.15);
+  font-weight: 400;
 
-    border-radius: 50%;
-
-    left: -70px;
-    bottom: -90px;
+  position: relative;
 }
 
-.contact-box::after {
-    content: "";
+.contact-section p {
 
-    position: absolute;
+  margin: 12px auto 25px;
 
-    width: 150px;
-    height: 150px;
+  max-width: 550px;
 
-    background: rgba(247,186,59,0.20);
+  font-size: 14px;
 
-    border-radius: 50%;
+  opacity: .85;
 
-    right: -60px;
-    top: -70px;
+  position: relative;
 }
 
-.contact-box > * {
-    position: relative;
-    z-index: 2;
+.contact-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: white;
+
+  color: #174b48;
+
+  padding: 14px 25px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+  position: relative;
 }
 
-.contact-title {
-    font-family: "DM Serif Display", serif;
+.contact-button svg {
 
-    font-size: clamp(40px, 5vw, 60px);
+  width: 19px;
 
-    color: var(--brown);
+  height: 19px;
 
-    font-weight: 400;
-
-    margin-bottom: 10px;
+  fill: currentColor;
 }
 
-.contact-subtitle {
-    color: #6e726f;
+.instagram-contact {
 
-    font-size: 14px;
+  margin-top: 20px;
 
-    margin-bottom: 28px;
+  font-size: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  position: relative;
 }
 
-.contact-buttons {
-    display: flex;
+.instagram-contact svg {
 
-    align-items: center;
-    justify-content: center;
+  width: 18px;
 
-    gap: 13px;
+  height: 18px;
 
-    flex-wrap: wrap;
+  fill: none;
 
-    margin-bottom: 25px;
-}
+  stroke: currentColor;
 
-.contact-instagram {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    color: var(--brown);
-}
-
-
-/* =====================================================
-   SOCIAL ICONS
-===================================================== */
-
-.instagram-icon {
-    width: 19px;
-    height: 19px;
-
-    flex-shrink: 0;
+  stroke-width: 1.8;
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
-.footer {
-    background: #153f3d;
+footer {
 
-    color: white;
+  background: #25211f;
 
-    padding: 65px 0 30px;
+  color: white;
+
+  padding: 55px 25px 30px;
 }
 
 .footer-inner {
-    width: min(1100px, 92%);
-    margin: auto;
 
-    display: grid;
+  max-width: 1150px;
 
-    grid-template-columns:
-        1.2fr 0.8fr 0.8fr;
+  margin: auto;
 
-    gap: 50px;
+  display: grid;
 
-    padding-bottom: 45px;
+  grid-template-columns: 1.3fr 1fr 1fr;
 
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+  gap: 50px;
 }
 
 .footer-brand {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
 }
 
-.footer-logo {
-    width: 90px;
-    background: white;
-    border-radius: 50%;
+.footer-brand img {
+
+  width: 75px;
+
+  height: 75px;
+
+  object-fit: contain;
 }
 
-.footer-brand-name {
-    font-family: "DM Serif Display", serif;
+.footer-brand h3 {
 
-    font-size: 24px;
+  font-family: "DM Serif Display", serif;
 
-    margin-bottom: 8px;
-}
+  font-size: 25px;
 
-.footer-description {
-    color: rgba(255,255,255,0.72);
+  font-weight: 400;
 
-    font-size: 12px;
-
-    max-width: 300px;
+  line-height: 1;
 }
 
 .footer-column h4 {
-    font-size: 13px;
 
-    margin-bottom: 15px;
+  font-size: 12px;
 
-    color: white;
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+
+  color: #f2c75b;
 }
 
 .footer-column a {
-    display: block;
 
-    color: rgba(255,255,255,0.72);
+  display: block;
 
-    font-size: 12px;
+  text-decoration: none;
 
-    margin-bottom: 9px;
+  color: #ddd6d0;
 
-    transition: color 0.2s ease;
+  font-size: 12px;
+
+  margin: 8px 0;
 }
 
 .footer-column a:hover {
-    color: white;
+
+  color: white;
 }
-
-.footer-social {
-    display: flex;
-    gap: 13px;
-    align-items: center;
-
-    margin-top: 13px;
-}
-
-.footer-social a {
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-}
-
-
-/* -------------------------
-   FOOTER BOTTOM
-------------------------- */
 
 .footer-bottom {
-    width: min(1100px, 92%);
-    margin: 25px auto 0;
 
-    display: flex;
+  max-width: 1150px;
 
-    justify-content: space-between;
-    align-items: center;
+  margin: 40px auto 0;
 
-    gap: 20px;
+  padding-top: 20px;
 
-    font-size: 11px;
+  border-top: 1px solid rgba(255,255,255,.12);
 
-    color: rgba(255,255,255,0.6);
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #aaa29c;
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE MENU
-===================================================== */
+========================================================= */
 
-.mobile-menu-button {
-    display: none;
+.menu-button {
 
-    border: none;
+  display: none;
 
-    background: transparent;
+  border: 0;
 
-    font-size: 27px;
+  background: none;
 
-    cursor: pointer;
+  font-size: 25px;
 
-    color: var(--brown);
+  cursor: pointer;
 }
 
 
-/* =====================================================
+/* =========================================================
    RESPONSIVE
-===================================================== */
+========================================================= */
 
 @media (max-width: 1050px) {
 
-    .main-nav {
-        gap: 15px;
-    }
+  .nav {
 
-    .header-inner {
-        gap: 15px;
-    }
+    gap: 14px;
+  }
 
-    .brand-name {
-        font-size: 19px;
-    }
+  .age-grid {
 
-    .hero-inner {
-        gap: 30px;
-    }
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    .hero-title {
-        font-size: clamp(52px, 6vw, 75px);
-    }
+  .book-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 }
 
 
 @media (max-width: 850px) {
 
-    .top-strip-inner {
-        gap: 10px;
-        font-size: 10px;
-    }
+  .top-bar-inner {
 
-    .main-nav,
-    .header-inner > .whatsapp-button {
-        display: none;
-    }
+    justify-content: center;
+  }
 
-    .mobile-menu-button {
-        display: block;
-    }
+  .top-social {
 
-    .hero-inner {
-        grid-template-columns: 1fr;
+    display: none;
+  }
 
-        text-align: center;
+  .header-inner {
 
-        padding: 60px 0 70px;
-    }
+    min-height: 75px;
 
-    .hero-description,
-    .hero-handwritten {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    padding: 8px 18px;
+  }
 
-    .hero-buttons,
-    .hero-values {
-        justify-content: center;
-    }
+  .brand img {
 
-    .hero-art {
-        min-height: 390px;
-        order: -1;
-    }
+    width: 55px;
 
-    .hero-logo {
-        width: 340px;
-    }
+    height: 55px;
+  }
 
-    .logo-halo {
-        width: 350px;
-        height: 350px;
-    }
+  .brand-name {
 
-    .age-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
+    font-size: 19px;
+  }
 
-    .story-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+  .nav {
 
-    .steps-grid {
-        grid-template-columns: 1fr;
-    }
+    display: none;
 
-    .footer-inner {
-        grid-template-columns: 1fr 1fr;
-    }
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 75px;
+
+    background: white;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+
+    display: flex;
+  }
+
+  .menu-button {
+
+    display: block;
+  }
+
+  .hero-inner {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 65px 25px 50px;
+  }
+
+  .hero-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+
+    justify-content: center;
+  }
+
+  .hero-features {
+
+    justify-content: center;
+  }
+
+  .hero-visual {
+
+    min-height: 360px;
+
+    order: -1;
+  }
+
+  .hero-logo {
+
+    width: 340px;
+  }
+
+  .logo-decor {
+
+    width: 320px;
+
+    height: 320px;
+  }
+
+  .type-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .new-inner,
+  .story-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+
+    grid-template-columns: 1fr 1fr;
+  }
 
 }
 
 
 @media (max-width: 550px) {
 
-    .top-strip {
-        display: none;
-    }
+  .hero-title {
 
-    .header-inner {
-        min-height: 74px;
-    }
+    font-size: 57px;
 
-    .brand-logo {
-        width: 56px;
-        height: 56px;
-    }
+    letter-spacing: -1px;
+  }
 
-    .brand-name {
-        font-size: 17px;
-        max-width: 140px;
-    }
+  .hero-script {
 
-    .hero {
-        min-height: auto;
-    }
+    font-size: 30px;
+  }
 
-    .hero-inner {
-        width: 90%;
-        padding-top: 45px;
-    }
+  .hero {
 
-    .hero-art {
-        min-height: 310px;
-    }
+    min-height: auto;
+  }
 
-    .hero-logo {
-        width: 280px;
-    }
+  .hero-inner {
 
-    .logo-halo {
-        width: 290px;
-        height: 290px;
-    }
+    min-height: auto;
+  }
 
-    .hero-title {
-        font-size: 54px;
-        letter-spacing: -1.5px;
-    }
+  .hero-visual {
 
-    .hero-handwritten {
-        font-size: 30px;
-    }
+    min-height: 310px;
+  }
 
-    .hero-description {
-        font-size: 13px;
-    }
+  .hero-logo {
 
-    .age-section,
-    .shop-section,
-    .story-section,
-    .how-section,
-    .contact-section {
-        padding: 70px 0;
-    }
+    width: 290px;
+  }
 
-    .age-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
+  .logo-decor {
 
-    .age-card {
-        min-height: 175px;
-        border-radius: 20px;
-    }
+    width: 270px;
 
-    .age-icon {
-        font-size: 33px;
-    }
+    height: 270px;
+  }
 
-    .age-name {
-        font-size: 18px;
-    }
+  .age-grid {
 
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
+  .type-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+
+    justify-content: center;
+  }
+
+  .top-bar {
+
+    font-size: 10px;
+  }
 
 }
 
 
-/* =====================================================
-   MOBILE NAV OVERLAY
-===================================================== */
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
 
-.mobile-nav {
-    display: none;
+:focus-visible {
 
-    position: fixed;
+  outline: 3px solid rgba(21,158,155,.35);
 
-    inset: 74px 0 0;
-
-    background: rgba(255,255,255,0.98);
-
-    z-index: 999;
-
-    padding: 30px;
-}
-
-.mobile-nav.active {
-    display: block;
-}
-
-.mobile-nav a {
-    display: block;
-
-    font-family: "DM Serif Display", serif;
-
-    font-size: 27px;
-
-    color: var(--brown);
-
-    padding: 12px 0;
-
-    border-bottom: 1px solid var(--line);
-}
-
-.mobile-nav .mobile-whatsapp {
-    display: inline-flex;
-
-    margin-top: 25px;
-
-    background: #153f3d;
-
-    color: white;
-
-    border-radius: 999px;
-
-    padding: 13px 20px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 14px;
+  outline-offset: 3px;
 }
 
 </style>
@@ -1538,1246 +2082,1600 @@ button {
 <body>
 
 
-<!-- =====================================================
-     TOP STRIP
-===================================================== -->
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
 
-<div class="top-strip">
+<div class="top-bar">
 
-    <div class="top-strip-inner">
+  <div class="top-bar-inner">
 
-        <div class="top-item">
-            <span>♡</span>
-            <span>Pre-Loved Books</span>
-        </div>
+    <span>♡ Pre-Loved Books</span>
 
-        <span class="top-dot">•</span>
+    <span class="dot">•</span>
 
-        <div class="top-item">
-            <span>▣</span>
-            <span>Carefully Chosen</span>
-        </div>
+    <span>📚 Carefully Chosen</span>
 
-        <span class="top-dot">•</span>
+    <span class="dot">•</span>
 
-        <div class="top-item">
-            <span>✦</span>
-            <span>New Adventures</span>
-        </div>
+    <span>✦ New Adventures</span>
+
+
+    <div class="top-social">
+
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://www.instagram.com/littlebooknestco/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Little Book Nest Co. on Instagram"
+      >
+
+        <svg viewBox="0 0 24 24">
+
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5">
+          </rect>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="4">
+          </circle>
+
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="1"
+            fill="currentColor"
+            stroke="none">
+          </circle>
+
+        </svg>
+
+        @littlebooknestco
+
+      </a>
+
+
+      <span class="dot">•</span>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/918004663110"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contact Little Book Nest Co. on WhatsApp"
+      >
+
+        <svg
+          class="whatsapp-icon"
+          viewBox="0 0 24 24"
+        >
+
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Zm-8.4 18c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.6 9.6 0 0 1-1.5-5.1C2.4 6.4 6.8 2 12.1 2c2.6 0 5 1 6.8 2.8a9.5 9.5 0 0 1 2.8 6.8c0 5.4-4.3 9.9-9.6 9.9Zm5.3-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.1-.3-.5.3-.5.8-1.7.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.1 3.2 5.1 4.5.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+
+        </svg>
+
+        8004663110
+
+      </a>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- =====================================================
+
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
-<header class="site-header">
+<header class="main-header">
 
-    <div class="header-inner">
-
-
-        <!-- BRAND -->
-
-        <a href="#home" class="brand">
-
-            <!--
-                IMPORTANT:
-                Your uploaded logo must be named logo.png
-            -->
-
-            <img
-                src="logo.png"
-                alt="Little Book Nest Co. logo"
-                class="brand-logo"
-            >
-
-            <div class="brand-name">
-                Little Book Nest Co.
-            </div>
-
-        </a>
+  <div class="header-inner">
 
 
-        <!-- DESKTOP NAV -->
+    <a href="#home" class="brand">
 
-        <nav class="main-nav">
+      <img
+        src="logo.png"
+        alt="Little Book Nest Co. logo"
+      >
 
-            <a href="#home">Home</a>
+      <span class="brand-name">
+        Little Book Nest<br>
+        Co.
+      </span>
 
-            <a href="#shop">Shop</a>
-
-            <a href="#ages">By Age</a>
-
-            <a href="#types">By Type</a>
-
-            <a href="#shop">
-                New In ✦
-            </a>
-
-            <a href="#story">Our Story</a>
-
-            <a href="#how-it-works">How It Works</a>
-
-        </nav>
+    </a>
 
 
-        <!-- WHATSAPP -->
-
-        <a
-            class="whatsapp-button"
-            href="https://wa.me/918004663110"
-            target="_blank"
-            rel="noopener"
-        >
-
-            <!-- Official-style WhatsApp SVG -->
-
-            <svg
-                class="whatsapp-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-            >
-
-                <path
-                    d="M12 2.2a9.7 9.7 0 0 0-8.37 14.6L2.2 21.8l5.15-1.35A9.7 9.7 0 1 0 12 2.2Z"
-                    fill="currentColor"
-                />
-
-                <path
-                    d="M8.7 7.3c.2-.22.44-.25.7-.25h.5c.18 0 .37.03.47.29l.7 1.7c.1.24.08.43-.06.62l-.55.72c-.1.14-.14.27-.04.46.27.5.68 1.08 1.27 1.62.62.57 1.25.94 1.78 1.17.2.09.33.06.45-.08l.62-.74c.14-.17.3-.22.53-.12l1.63.77c.24.11.4.17.45.29.06.13.06.76-.18 1.15-.24.4-.82.78-1.37.84-.4.05-.9.07-1.47-.11-.34-.1-.77-.25-1.32-.5-.57-.26-1.28-.66-2-1.32-.59-.54-1.05-1.15-1.38-1.61-.35-.49-.7-1.16-.83-1.63-.13-.48-.13-.9-.02-1.26.1-.34.35-.75.5-.93Z"
-                    fill="#153f3d"
-                />
-
-            </svg>
-
-            WhatsApp
-
-        </a>
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
 
 
-        <!-- MOBILE MENU -->
+    <nav class="nav" id="mainNav">
 
-        <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            aria-label="Open menu"
-        >
-            ☰
-        </button>
+      <a href="#home">Home</a>
 
-    </div>
+      <a href="#shop">Shop</a>
+
+      <a href="#age">By Age</a>
+
+      <a href="#type">By Type</a>
+
+      <a href="#new">New In ✦</a>
+
+      <a href="#story">Our Story</a>
+
+      <a href="#how">How It Works</a>
+
+      <a
+        href="https://wa.me/918004663110"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-button"
+      >
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Z"/>
+
+        </svg>
+
+        WhatsApp
+
+      </a>
+
+    </nav>
+
+  </div>
 
 </header>
 
 
-<!-- =====================================================
-     MOBILE NAV
-===================================================== -->
 
-<div class="mobile-nav" id="mobileNav">
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <a href="#home">Home</a>
+<section class="hero" id="home">
 
-    <a href="#shop">Shop</a>
+  <div class="hero-inner">
 
-    <a href="#ages">By Age</a>
 
-    <a href="#types">By Type</a>
+    <div class="hero-copy">
 
-    <a href="#shop">New In ✦</a>
+      <div class="eyebrow">
+        A LITTLE NEST FOR EVERY KIND OF READER
+      </div>
 
-    <a href="#story">Our Story</a>
 
-    <a href="#how-it-works">How It Works</a>
+      <h1 class="hero-title">
 
-    <a
-        class="mobile-whatsapp"
+        Loved Books.<br>
+
+        <span class="new">New</span>
+        <span class="adventures"> Adventures.</span>
+
+      </h1>
+
+
+      <div class="hero-script">
+
+        Pre-loved books finding their way into
+        new hands. <span>♥</span>
+
+      </div>
+
+
+      <p class="hero-description">
+
+        Discover carefully chosen pre-loved books for
+        tiny readers, growing readers, teens, young adults
+        and curious minds of every age.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#shop"
+          class="primary-button"
+        >
+          📖 &nbsp; Shop the Nest →
+        </a>
+
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          rel="noopener"
+          class="secondary-button"
+        >
+          ♡ &nbsp; WhatsApp Us
+        </a>
+
+      </div>
+
+
+      <div class="hero-features">
+
+        <span class="hero-feature">
+          <span class="heart">♥</span>
+          Great Stories
+        </span>
+
+        <span class="hero-feature">
+          <span class="book">▣</span>
+          Better Together
+        </span>
+
+        <span class="hero-feature">
+          <span class="leaf">❧</span>
+          A Greener Choice
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- LOGO -->
+
+    <div class="hero-visual">
+
+      <div class="logo-decor"></div>
+
+      <div class="logo-blob-one"></div>
+
+      <div class="logo-blob-two"></div>
+
+
+      <div class="decor-heart-one">
+        ♥
+      </div>
+
+      <div class="decor-heart-two">
+        ♥
+      </div>
+
+      <div class="decor-star">
+        ✦
+      </div>
+
+
+      <!-- YOUR ACTUAL LOGO -->
+      <!-- NO FILTER / NO OVERLAY / NO HALO -->
+
+      <img
+        src="logo.png"
+        class="hero-logo"
+        alt="Little Book Nest Co."
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP BY AGE
+========================================================= -->
+
+<section
+  class="section age-section"
+  id="age"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>Find Their Little Nest</h2>
+
+      <p>
+        Books for every stage of the reading journey.
+      </p>
+
+    </div>
+
+
+    <div class="age-grid">
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Tiny Readers"
+      >
+
+        <div class="age-icon">🦌</div>
+
+        <h3>Tiny Readers</h3>
+
+        <p>0–2 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Toddler Tales"
+      >
+
+        <div class="age-icon">🐰</div>
+
+        <h3>Toddler Tales</h3>
+
+        <p>2–4 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Story Time Stars"
+      >
+
+        <div class="age-icon">🦊</div>
+
+        <h3>Story Time Stars</h3>
+
+        <p>4–6 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Early Adventurers"
+      >
+
+        <div class="age-icon">🦔</div>
+
+        <h3>Early Adventurers</h3>
+
+        <p>6–8 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Young Readers"
+      >
+
+        <div class="age-icon">🦦</div>
+
+        <h3>Young Readers</h3>
+
+        <p>8–12 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Teen Reads"
+      >
+
+        <div class="age-icon">🦝</div>
+
+        <h3>Teen Reads</h3>
+
+        <p>13–17 years</p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Young Adult"
+      >
+
+        <div class="age-icon">🦌</div>
+
+        <h3>Young Adult</h3>
+
+        <p>18+ years</p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP BY TYPE
+========================================================= -->
+
+<section
+  class="section type-section"
+  id="type"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>Choose Your Kind of Story</h2>
+
+      <p>
+        From treasured tales to curious minds.
+      </p>
+
+    </div>
+
+
+    <div class="type-grid">
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Pre-Loved Fiction"
+      >
+
+        <div class="type-icon">📚</div>
+
+        <h3>Pre-Loved Fiction</h3>
+
+        <p>
+          Stories, adventures, mysteries,
+          fantasy and everything in between.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Pre-Loved Non-Fiction"
+      >
+
+        <div class="type-icon">🔎</div>
+
+        <h3>Pre-Loved Non-Fiction</h3>
+
+        <p>
+          Knowledge, discovery, science,
+          history and curious minds.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Young Adult"
+      >
+
+        <div class="type-icon">✨</div>
+
+        <h3>Young Adult</h3>
+
+        <p>
+          18+ reads for grown-up readers
+          who still love a good story.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Book Bundles"
+      >
+
+        <div class="type-icon">🎁</div>
+
+        <h3>Book Bundles</h3>
+
+        <p>
+          Curated collections made for
+          little and big book lovers.
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP
+========================================================= -->
+
+<section
+  class="section shop-section"
+  id="shop"
+>
+
+  <div class="section-inner">
+
+
+    <div class="section-heading">
+
+      <h2>Shop the Nest</h2>
+
+      <p>
+        Every book is waiting for its next adventure.
+      </p>
+
+    </div>
+
+
+    <div class="shop-controls">
+
+
+      <div class="search-box">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search by title, author or keyword..."
+          oninput="filterBooks()"
+        >
+
+      </div>
+
+
+      <div class="filter-buttons">
+
+        <button
+          class="filter-button active"
+          onclick="setFilter('all', this)"
+        >
+          All Books
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('fiction', this)"
+        >
+          Fiction
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('nonfiction', this)"
+        >
+          Non-Fiction
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('youngadult', this)"
+        >
+          Young Adult
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('new', this)"
+        >
+          New In
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="book-grid"
+      id="bookGrid"
+    >
+
+      <!-- BOOKS WILL LOAD HERE -->
+
+      <div class="no-books">
+
+        <p>
+          Our newest books are being added to the Nest.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          rel="noopener"
+          class="primary-button"
+        >
+          Ask us on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NEW IN
+========================================================= -->
+
+<section
+  class="section new-section"
+  id="new"
+>
+
+  <div class="section-inner">
+
+    <div class="new-inner">
+
+
+      <div class="new-copy">
+
+        <h2>
+          Fresh arrivals.<br>
+          <span>New adventures.</span>
+        </h2>
+
+        <p>
+
+          New books are added regularly, so there is
+          always another little treasure waiting to be found.
+
+        </p>
+
+
+        <a
+          href="#shop"
+          class="primary-button"
+        >
+          Explore New In →
+        </a>
+
+      </div>
+
+
+      <div class="new-art">
+
+        <span>📚</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR STORY
+========================================================= -->
+
+<section
+  class="section story-section"
+  id="story"
+>
+
+  <div class="section-inner">
+
+    <div class="story-grid">
+
+
+      <div class="story-copy">
+
+        <h2>
+          A little nest<br>
+          <span>for every reader.</span>
+        </h2>
+
+
+        <p>
+
+          Little Book Nest Co. is a home for books
+          that still have stories left to tell.
+
+          <br><br>
+
+          We carefully choose pre-loved books and
+          give them a chance to find new hands,
+          new shelves and new adventures.
+
+        </p>
+
+
+        <div class="story-note">
+
+          Loved books deserve another adventure. ♥
+
+        </div>
+
+      </div>
+
+
+      <div class="story-box">
+
+        <h3>
+          Why pre-loved?
+        </h3>
+
+
+        <ul>
+
+          <li>♡ Beautiful books without the brand-new price tag</li>
+
+          <li>📚 Give favourite stories another home</li>
+
+          <li>🌱 A more thoughtful way to build a library</li>
+
+          <li>✨ Discover titles you may not have expected</li>
+
+          <li>♥ Carefully chosen with readers in mind</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section
+  class="section how-section"
+  id="how"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>How It Works</h2>
+
+      <p>
+        Finding a book should be simple.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">1</div>
+
+        <h3>Browse</h3>
+
+        <p>
+          Explore our latest pre-loved books
+          by age or type.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">2</div>
+
+        <h3>Choose</h3>
+
+        <p>
+          Find a book that feels like
+          it belongs in your nest.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">3</div>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          Tap the WhatsApp button and
+          send us your book request.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">4</div>
+
+        <h3>Adventure</h3>
+
+        <p>
+          We arrange your order and
+          your book begins its next chapter.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  class="contact-section"
+>
+
+  <h2>Let's Find Some Stories</h2>
+
+  <p>
+    Looking for something specific?
+    Need help choosing a book?
+    We'd love to help.
+  </p>
+
+
+  <a
+    href="https://wa.me/918004663110"
+    target="_blank"
+    rel="noopener"
+    class="contact-button"
+  >
+
+    <svg viewBox="0 0 24 24">
+
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Z"/>
+
+    </svg>
+
+    Chat on WhatsApp
+
+  </a>
+
+
+  <a
+    href="https://www.instagram.com/littlebooknestco/"
+    target="_blank"
+    rel="noopener"
+    class="instagram-contact"
+  >
+
+    <svg viewBox="0 0 24 24">
+
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5">
+      </rect>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="4">
+      </circle>
+
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        fill="currentColor"
+        stroke="none">
+      </circle>
+
+    </svg>
+
+    @littlebooknestco
+
+  </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-brand">
+
+        <img
+          src="logo.png"
+          alt="Little Book Nest Co."
+        >
+
+        <h3>
+          Little Book Nest<br>
+          Co.
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Explore</h4>
+
+      <a href="#home">Home</a>
+
+      <a href="#shop">Shop</a>
+
+      <a href="#age">By Age</a>
+
+      <a href="#type">By Type</a>
+
+      <a href="#new">New In</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Connect</h4>
+
+      <a
+        href="https://www.instagram.com/littlebooknestco/"
+        target="_blank"
+      >
+        Instagram · @littlebooknestco
+      </a>
+
+      <a
         href="https://wa.me/918004663110"
         target="_blank"
-    >
-        WhatsApp Us
-    </a>
-
-</div>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main id="home">
-
-<section class="hero">
-
-
-    <!-- Decorative shapes -->
-
-    <div class="corner corner-teal"></div>
-
-    <div class="corner corner-yellow"></div>
-
-
-    <div class="hero-inner">
-
-
-        <!-- HERO COPY -->
-
-        <div class="hero-copy">
-
-
-            <div class="hero-kicker">
-                A Little Nest for Every Kind of Reader
-            </div>
-
-
-            <h1 class="hero-title">
-
-                Loved Books.<br>
-
-                <span class="new">New</span>
-                <span class="adventures"> Adventures.</span>
-
-            </h1>
-
-
-            <div class="hero-handwritten">
-
-                Pre-loved books finding their way into
-                new hands.
-
-                <span class="hero-heart">♥</span>
-
-            </div>
-
-
-            <p class="hero-description">
-
-                Discover carefully chosen pre-loved books for
-                tiny readers, growing readers, teens, young
-                adults and curious minds of every age.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#shop"
-                    class="primary-button"
-                >
-                    📖 Shop the Nest →
-                </a>
-
-
-                <a
-                    href="https://wa.me/918004663110"
-                    target="_blank"
-                    rel="noopener"
-                    class="secondary-button"
-                >
-
-                    <svg
-                        class="whatsapp-icon"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-
-                        <path
-                            d="M12 2.2a9.7 9.7 0 0 0-8.37 14.6L2.2 21.8l5.15-1.35A9.7 9.7 0 1 0 12 2.2Z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                    WhatsApp Us
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-values">
-
-                <div class="hero-value">
-                    <span class="value-heart">♥</span>
-                    Great Stories
-                </div>
-
-                <div class="hero-value">
-                    <span class="value-book">▣</span>
-                    Better Together
-                </div>
-
-                <div class="hero-value">
-                    <span class="value-leaf">❧</span>
-                    A Greener Choice
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- HERO LOGO -->
-
-        <div class="hero-art">
-
-
-            <!--
-                HALO IS BEHIND THE LOGO.
-                IT DOES NOT TOUCH OR TINT THE LOGO.
-            -->
-
-            <div class="logo-halo"></div>
-
-
-            <!-- ACTUAL LOGO -->
-
-            <img
-                src="logo.png"
-                alt="Little Book Nest Co."
-                class="hero-logo"
-            >
-
-
-            <!-- Decorative elements -->
-
-            <span class="decor decor-heart heart-one">
-                ♥
-            </span>
-
-            <span class="decor decor-heart heart-two">
-                ♥
-            </span>
-
-            <span class="decor decor-star star-one">
-                ✦
-            </span>
-
-            <span class="decor decor-star star-two">
-                ✦
-            </span>
-
-            <span class="decor decor-small leaf-one">
-                ❧
-            </span>
-
-            <span class="decor decor-small leaf-two">
-                ❧
-            </span>
-
-
-        </div>
-
+      >
+        WhatsApp · 8004663110
+      </a>
+
+      <a href="#story">
+        Our Story
+      </a>
+
+      <a href="#how">
+        How It Works
+      </a>
 
     </div>
 
-</section>
+  </div>
 
 
+  <div class="footer-bottom">
 
-<!-- =====================================================
-     SHOP BY AGE
-===================================================== -->
+    © 2026 Little Book Nest Co. · Loved Books · New Adventures
 
-<section
-    class="age-section"
-    id="ages"
->
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-            <div class="section-kicker">
-                Find Their Next Favourite
-            </div>
-
-            <h2 class="section-title">
-                Shop by Age
-            </h2>
-
-            <p class="section-subtitle">
-                A little story for every stage of their journey.
-            </p>
-
-        </div>
-
-
-        <div class="age-grid">
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦌</div>
-
-                <div class="age-name">
-                    Tiny Readers
-                </div>
-
-                <div class="age-years">
-                    0–2 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🐰</div>
-
-                <div class="age-name">
-                    Toddler Tales
-                </div>
-
-                <div class="age-years">
-                    2–4 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦊</div>
-
-                <div class="age-name">
-                    Story Time Stars
-                </div>
-
-                <div class="age-years">
-                    4–6 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦔</div>
-
-                <div class="age-name">
-                    Early Adventurers
-                </div>
-
-                <div class="age-years">
-                    6–8 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦦</div>
-
-                <div class="age-name">
-                    Young Readers
-                </div>
-
-                <div class="age-years">
-                    8–12 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦝</div>
-
-                <div class="age-name">
-                    Teen Reads
-                </div>
-
-                <div class="age-years">
-                    13–17 years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🦌</div>
-
-                <div class="age-name">
-                    Young Adult
-                </div>
-
-                <div class="age-years">
-                    18+ years
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🎁</div>
-
-                <div class="age-name">
-                    Book Bundles
-                </div>
-
-                <div class="age-years">
-                    Curated collections
-                </div>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     SHOP
-===================================================== -->
-
-<section
-    class="shop-section"
-    id="shop"
->
-
-    <div class="section-container">
-
-
-        <div class="shop-intro">
-
-            <div class="section-kicker">
-                The Nest
-            </div>
-
-            <h2 class="section-title">
-                Find Some Stories
-            </h2>
-
-            <p class="section-subtitle">
-                Carefully chosen pre-loved books, waiting
-                for their next reader.
-            </p>
-
-        </div>
-
-
-        <!--
-            THIS IS INTENTIONALLY STRUCTURED AS THE
-            FUTURE LISTING AREA.
-
-            We will connect your spreadsheet here next.
-        -->
-
-        <div class="shop-placeholder">
-
-            <div class="shop-placeholder-inner">
-
-                <h3>
-                    Your next favourite book is waiting.
-                </h3>
-
-                <p>
-                    Browse our latest arrivals, shop by age,
-                    or tell us what you're looking for.
-                    We'll help you find the right story.
-                </p>
-
-                <br>
-
-                <a
-                    href="https://wa.me/918004663110"
-                    target="_blank"
-                    class="primary-button"
-                >
-                    💬 Ask us on WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     BY TYPE
-===================================================== -->
-
-<section
-    class="age-section"
-    id="types"
->
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-            <div class="section-kicker">
-                Browse Your Way
-            </div>
-
-            <h2 class="section-title">
-                Shop by Type
-            </h2>
-
-            <p class="section-subtitle">
-                Stories, learning, picture books and more.
-            </p>
-
-        </div>
-
-
-        <div class="age-grid">
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">📚</div>
-
-                <div class="age-name">
-                    Story Books
-                </div>
-
-                <div class="age-years">
-                    Adventures & imagination
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🌎</div>
-
-                <div class="age-name">
-                    Knowledge
-                </div>
-
-                <div class="age-years">
-                    Learn something new
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🎨</div>
-
-                <div class="age-name">
-                    Activity Books
-                </div>
-
-                <div class="age-years">
-                    Create & explore
-                </div>
-
-            </a>
-
-
-            <a href="#shop" class="age-card">
-
-                <div class="age-icon">🧚</div>
-
-                <div class="age-name">
-                    Picture Books
-                </div>
-
-                <div class="age-years">
-                    Beautiful little worlds
-                </div>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     OUR STORY
-===================================================== -->
-
-<section
-    class="story-section"
-    id="story"
->
-
-    <div class="section-container">
-
-
-        <div class="story-grid">
-
-
-            <div class="story-logo-box">
-
-                <div class="story-logo-bg"></div>
-
-                <img
-                    src="logo.png"
-                    alt="Little Book Nest Co."
-                    class="story-logo"
-                >
-
-            </div>
-
-
-            <div class="story-copy">
-
-                <div class="section-kicker">
-                    Our Little Story
-                </div>
-
-                <h2>
-                    A little nest
-                    <span>for every reader.</span>
-                </h2>
-
-
-                <p>
-                    Little Book Nest Co. is a home for
-                    pre-loved children's books that still
-                    have plenty of adventures left in them.
-                </p>
-
-
-                <p>
-                    Every book is carefully chosen with the
-                    hope that it will leave one little reader
-                    and find its way into another pair of
-                    curious hands.
-                </p>
-
-
-                <p>
-                    Because good stories deserve more than
-                    one childhood.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HOW IT WORKS
-===================================================== -->
-
-<section
-    class="how-section"
-    id="how-it-works"
->
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-            <div class="section-kicker">
-                Simple & Easy
-            </div>
-
-            <h2 class="section-title">
-                How It Works
-            </h2>
-
-            <p class="section-subtitle">
-                Finding a new-to-you book should be easy.
-            </p>
-
-        </div>
-
-
-        <div class="steps-grid">
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    1
-                </div>
-
-                <h3>
-                    Find Your Story
-                </h3>
-
-                <p>
-                    Browse our books by age, type or
-                    newest arrivals.
-                </p>
-
-            </div>
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    2
-                </div>
-
-                <h3>
-                    Choose Your Books
-                </h3>
-
-                <p>
-                    Pick the books that belong in your
-                    little reader's next adventure.
-                </p>
-
-            </div>
-
-
-            <div class="step-card">
-
-                <div class="step-number">
-                    3
-                </div>
-
-                <h3>
-                    Welcome Them Home
-                </h3>
-
-                <p>
-                    Order through WhatsApp and we'll
-                    carefully pack your books.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="contact-section">
-
-    <div class="section-container">
-
-
-        <div class="contact-box">
-
-
-            <div class="section-kicker">
-                Need a Little Help?
-            </div>
-
-
-            <h2 class="contact-title">
-                Let's Find Some Stories
-            </h2>
-
-
-            <p class="contact-subtitle">
-                Looking for something specific?
-                We'd love to help.
-            </p>
-
-
-            <div class="contact-buttons">
-
-
-                <a
-                    href="https://wa.me/918004663110"
-                    target="_blank"
-                    rel="noopener"
-                    class="primary-button"
-                >
-
-                    <svg
-                        class="whatsapp-icon"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-
-                        <path
-                            d="M12 2.2a9.7 9.7 0 0 0-8.37 14.6L2.2 21.8l5.15-1.35A9.7 9.7 0 1 0 12 2.2Z"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                    Chat on WhatsApp
-
-                </a>
-
-
-                <a
-                    href="https://www.instagram.com/littlebooknestco/"
-                    target="_blank"
-                    rel="noopener"
-                    class="secondary-button"
-                >
-
-                    <svg
-                        class="instagram-icon"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-
-                        <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="5"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        />
-
-                        <circle
-                            cx="17.3"
-                            cy="6.8"
-                            r="1"
-                            fill="currentColor"
-                        />
-
-                    </svg>
-
-                    Instagram
-
-                </a>
-
-
-            </div>
-
-
-            <!-- INSTAGRAM -->
-
-            <a
-                href="https://www.instagram.com/littlebooknestco/"
-                target="_blank"
-                rel="noopener"
-                class="contact-instagram"
-            >
-
-                <svg
-                    class="instagram-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-
-                    <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-
-                    <circle
-                        cx="17.3"
-                        cy="6.8"
-                        r="1"
-                        fill="currentColor"
-                    />
-
-                </svg>
-
-                @littlebooknestco
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-    <div class="footer-inner">
-
-
-        <!-- FOOTER BRAND -->
-
-        <div>
-
-            <div class="footer-brand">
-
-                <img
-                    src="logo.png"
-                    alt="Little Book Nest Co."
-                    class="footer-logo"
-                >
-
-                <div>
-
-                    <div class="footer-brand-name">
-                        Little Book Nest Co.
-                    </div>
-
-                    <p class="footer-description">
-                        Loved books. New adventures.
-                        Giving wonderful stories another
-                        chance to be loved.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- QUICK LINKS -->
-
-        <div class="footer-column">
-
-            <h4>
-                Explore
-            </h4>
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#shop">
-                Shop
-            </a>
-
-            <a href="#ages">
-                By Age
-            </a>
-
-            <a href="#types">
-                By Type
-            </a>
-
-        </div>
-
-
-        <!-- CONNECT -->
-
-        <div class="footer-column">
-
-            <h4>
-                Connect
-            </h4>
-
-            <a
-                href="https://www.instagram.com/littlebooknestco/"
-                target="_blank"
-            >
-
-                <svg
-                    class="instagram-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="vertical-align:middle;margin-right:5px;"
-                >
-
-                    <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    />
-
-                    <circle
-                        cx="17.3"
-                        cy="6.8"
-                        r="1"
-                        fill="currentColor"
-                    />
-
-                </svg>
-
-                @littlebooknestco
-
-            </a>
-
-
-            <a
-                href="https://wa.me/918004663110"
-                target="_blank"
-            >
-
-                <svg
-                    class="whatsapp-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="vertical-align:middle;margin-right:5px;"
-                >
-
-                    <path
-                        d="M12 2.2a9.7 9.7 0 0 0-8.37 14.6L2.2 21.8l5.15-1.35A9.7 9.7 0 1 0 12 2.2Z"
-                        fill="currentColor"
-                    />
-
-                </svg>
-
-                8004663110
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 Little Book Nest Co.
-        </span>
-
-        <span>
-            Loved Books · New Adventures
-        </span>
-
-    </div>
+  </div>
 
 </footer>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      JAVASCRIPT
-===================================================== -->
+========================================================= -->
 
 <script>
 
 
-/* -----------------------------------------------
+/* =========================================================
    MOBILE MENU
------------------------------------------------ */
+========================================================= */
 
-const mobileMenuButton =
-    document.getElementById("mobileMenuButton");
+function toggleMenu() {
 
-const mobileNav =
-    document.getElementById("mobileNav");
+  document
+    .getElementById("mainNav")
+    .classList
+    .toggle("open");
 
-
-mobileMenuButton.addEventListener("click", function () {
-
-    mobileNav.classList.toggle("active");
-
-});
+}
 
 
-/* Close mobile menu after clicking a link */
 
-const mobileLinks =
-    mobileNav.querySelectorAll("a");
+/* =========================================================
+   GOOGLE SHEET SETTINGS
+========================================================= */
 
 
-mobileLinks.forEach(function(link) {
+/*
+IMPORTANT:
 
-    link.addEventListener("click", function() {
+When your Google Sheet is ready, paste the
+PUBLISHED CSV URL between the quotation marks below.
 
-        mobileNav.classList.remove("active");
+Example:
+
+const GOOGLE_SHEET_URL =
+"https://docs.google.com/spreadsheets/d/e/XXXXX/pub?output=csv";
+
+Until you add the URL, the website will show
+the sample books below.
+*/
+
+
+const GOOGLE_SHEET_URL = "";
+
+
+
+/* =========================================================
+   SAMPLE BOOKS
+========================================================= */
+
+const sampleBooks = [
+
+  {
+    title: "The Gruffalo",
+    author: "Julia Donaldson",
+    price: "₹120",
+    age: "Story Time Stars",
+    type: "Pre-Loved Fiction",
+    image: "",
+    new: true
+  },
+
+  {
+    title: "The Very Hungry Caterpillar",
+    author: "Eric Carle",
+    price: "₹150",
+    age: "Toddler Tales",
+    type: "Pre-Loved Fiction",
+    image: "",
+    new: true
+  },
+
+  {
+    title: "National Geographic Kids",
+    author: "National Geographic",
+    price: "₹180",
+    age: "Young Readers",
+    type: "Pre-Loved Non-Fiction",
+    image: "",
+    new: false
+  },
+
+  {
+    title: "A Little Princess",
+    author: "Frances Hodgson Burnett",
+    price: "₹160",
+    age: "Young Adult",
+    type: "Pre-Loved Fiction",
+    image: "",
+    new: true
+  }
+
+];
+
+
+
+/* =========================================================
+   BOOK STATE
+========================================================= */
+
+let books = [];
+
+let currentFilter = "all";
+
+
+
+/* =========================================================
+   LOAD BOOKS
+========================================================= */
+
+async function loadBooks() {
+
+  if (!GOOGLE_SHEET_URL) {
+
+    books = sampleBooks;
+
+    renderBooks();
+
+    return;
+
+  }
+
+
+  try {
+
+    const response =
+      await fetch(GOOGLE_SHEET_URL);
+
+    const csv =
+      await response.text();
+
+    books =
+      parseCSV(csv);
+
+    renderBooks();
+
+  }
+
+  catch(error) {
+
+    console.error(error);
+
+    books = sampleBooks;
+
+    renderBooks();
+
+  }
+
+}
+
+
+
+/* =========================================================
+   CSV PARSER
+========================================================= */
+
+function parseCSV(text) {
+
+  const rows =
+    text
+      .trim()
+      .split(/\r?\n/)
+      .map(row =>
+        row.split(",").map(cell =>
+          cell.trim().replace(/^"|"$/g, "")
+        )
+      );
+
+
+  if (rows.length < 2) {
+
+    return [];
+
+  }
+
+
+  const headers =
+    rows[0].map(header =>
+      header.toLowerCase()
+    );
+
+
+  return rows
+    .slice(1)
+    .map(row => {
+
+      const book = {};
+
+      headers.forEach((header, index) => {
+
+        book[header] =
+          row[index] || "";
+
+      });
+
+      return {
+
+        title:
+          book.title || "Untitled Book",
+
+        author:
+          book.author || "",
+
+        price:
+          book.price || "Ask us",
+
+        age:
+          book.age || "",
+
+        type:
+          book.type || "",
+
+        image:
+          book.image || "",
+
+        new:
+          String(book.new)
+            .toLowerCase() === "yes"
+
+      };
 
     });
 
-});
+}
 
 
-/* -----------------------------------------------
-   HEADER SHADOW ON SCROLL
------------------------------------------------ */
 
-const header =
-    document.querySelector(".site-header");
+/* =========================================================
+   RENDER BOOKS
+========================================================= */
+
+function renderBooks() {
+
+  const grid =
+    document.getElementById("bookGrid");
 
 
-window.addEventListener("scroll", function() {
+  const search =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
 
-    if (window.scrollY > 10) {
 
-        header.style.boxShadow =
-            "0 4px 25px rgba(0,0,0,0.06)";
+  let filtered =
+    books.filter(book => {
 
-    } else {
 
-        header.style.boxShadow = "none";
+      const searchable =
+        `${book.title}
+         ${book.author}
+         ${book.age}
+         ${book.type}`
+        .toLowerCase();
 
-    }
 
-});
+      const matchesSearch =
+        searchable.includes(search);
+
+
+      let matchesFilter = true;
+
+
+      if (currentFilter === "fiction") {
+
+        matchesFilter =
+          book.type
+            .toLowerCase()
+            .includes("fiction") &&
+          !book.type
+            .toLowerCase()
+            .includes("non");
+
+      }
+
+
+      if (currentFilter === "nonfiction") {
+
+        matchesFilter =
+          book.type
+            .toLowerCase()
+            .includes("non-fiction");
+
+      }
+
+
+      if (currentFilter === "youngadult") {
+
+        matchesFilter =
+          book.age
+            .toLowerCase()
+            .includes("young adult");
+
+      }
+
+
+      if (currentFilter === "new") {
+
+        matchesFilter = book.new === true;
+
+      }
+
+
+      return matchesSearch && matchesFilter;
+
+    });
+
+
+  if (!filtered.length) {
+
+    grid.innerHTML = `
+
+      <div class="no-books">
+
+        <p>
+          We couldn't find that one in the Nest.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          class="primary-button"
+        >
+          Ask us on WhatsApp
+        </a>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  grid.innerHTML =
+    filtered
+      .map(book => createBookCard(book))
+      .join("");
+
+}
+
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+function createBookCard(book) {
+
+  const encodedTitle =
+    encodeURIComponent(book.title);
+
+
+  const whatsappMessage =
+    encodeURIComponent(
+      `Hi Little Book Nest Co.! I'd like to order "${book.title}".`
+    );
+
+
+  const imageHTML =
+    book.image
+      ? `<img src="${book.image}" alt="${book.title}">`
+      : `<div class="book-placeholder">📖</div>`;
+
+
+  return `
+
+    <article class="book-card">
+
+      <div class="book-image">
+
+        ${imageHTML}
+
+      </div>
+
+
+      <div class="book-info">
+
+        <h3>
+          ${book.title}
+        </h3>
+
+
+        <div class="book-author">
+
+          ${book.author}
+
+        </div>
+
+
+        <div class="book-meta">
+
+          <span class="book-price">
+            ${book.price}
+          </span>
+
+
+          <span class="book-tag">
+            ${book.age || "Every reader"}
+          </span>
+
+        </div>
+
+
+        <a
+          href="https://wa.me/918004663110?text=${whatsappMessage}"
+          target="_blank"
+          rel="noopener"
+          class="order-book"
+        >
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+function setFilter(filter, button) {
+
+  currentFilter = filter;
+
+
+  document
+    .querySelectorAll(".filter-button")
+    .forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+
+  button.classList.add("active");
+
+
+  renderBooks();
+
+}
+
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function filterBooks() {
+
+  renderBooks();
+
+}
+
+
+
+/* =========================================================
+   AGE CARD FILTERING
+========================================================= */
+
+document
+  .querySelectorAll("[data-filter-age]")
+  .forEach(card => {
+
+    card.addEventListener("click", function() {
+
+      const age =
+        this.dataset.filterAge;
+
+
+      currentFilter = "all";
+
+
+      document
+        .querySelectorAll(".filter-button")
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+
+      document
+        .querySelector(".filter-button")
+        .classList.add("active");
+
+
+      setTimeout(() => {
+
+        const searchInput =
+          document.getElementById("searchInput");
+
+        searchInput.value = age;
+
+        renderBooks();
+
+      }, 50);
+
+    });
+
+  });
+
+
+
+/* =========================================================
+   TYPE CARD FILTERING
+========================================================= */
+
+document
+  .querySelectorAll("[data-filter-type]")
+  .forEach(card => {
+
+    card.addEventListener("click", function() {
+
+      const type =
+        this.dataset.filterType;
+
+
+      document
+        .getElementById("searchInput")
+        .value = type;
+
+
+      currentFilter = "all";
+
+
+      document
+        .querySelectorAll(".filter-button")
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+
+      document
+        .querySelector(".filter-button")
+        .classList.add("active");
+
+
+      renderBooks();
+
+    });
+
+  });
+
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadBooks();
 
 
 </script>
 
 
 </body>
+
 </html>
