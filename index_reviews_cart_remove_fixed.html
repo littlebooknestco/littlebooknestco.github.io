@@ -1,0 +1,5140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Little Book Nest Co. — Carefully chosen pre-loved books for every kind of reader.">
+
+<title>Little Book Nest Co. | Loved Books. New Adventures.</title>
+
+
+<!-- =========================================================
+     FONTS
+========================================================= -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   BRAND COLOURS
+========================================================= */
+
+:root {
+
+  --teal: #159e9b;
+  --teal-dark: #176e6c;
+
+  --coral: #e86d69;
+  --coral-dark: #c95755;
+
+  --yellow: #f4b63f;
+
+  --green: #6f8e4e;
+
+  --brown: #332522;
+
+  --cream: #fffdf8;
+
+  --white: #ffffff;
+
+  --soft-green: #e7f5ed;
+  --soft-blue: #e5f5f5;
+  --soft-coral: #fff0ee;
+  --soft-yellow: #fff6dc;
+  --soft-lilac: #f4effb;
+
+  --border: #e6ded3;
+
+  --shadow: 0 12px 35px rgba(45, 65, 55, 0.08);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: "Poppins", sans-serif;
+
+  background: #fffefa;
+
+  color: var(--brown);
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+
+  background: #173f3c;
+
+  color: white;
+
+  font-size: 12px;
+
+  padding: 8px 20px;
+
+  letter-spacing: .1px;
+}
+
+.top-bar-inner {
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  position: relative;
+}
+
+.top-bar .dot {
+  opacity: .55;
+}
+
+.top-social {
+
+  position: absolute;
+
+  right: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.top-social a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.top-social svg {
+
+  width: 16px;
+
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+}
+
+.top-social .whatsapp-icon {
+
+  fill: currentColor;
+
+  stroke: none;
+}
+
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.main-header {
+
+  background: rgba(255,255,255,.96);
+
+  border-bottom: 1px solid #eee7df;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+
+  max-width: 1250px;
+
+  min-height: 92px;
+
+  margin: auto;
+
+  padding: 12px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* BRAND */
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.brand img {
+
+  width: 68px;
+
+  height: 68px;
+
+  object-fit: contain;
+}
+
+.brand-name {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 23px;
+
+  line-height: 1.02;
+
+  color: #302320;
+}
+
+
+/* NAVIGATION */
+
+.nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.nav a {
+
+  text-decoration: none;
+
+  color: #342a27;
+
+  transition: .2s ease;
+}
+
+.nav a:hover {
+
+  color: var(--teal);
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-button {
+
+  background: #25201f;
+
+  color: white !important;
+
+  border-radius: 999px;
+
+  padding: 12px 19px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: .2s ease;
+}
+
+.whatsapp-button:hover {
+
+  background: var(--teal-dark);
+
+  transform: translateY(-1px);
+}
+
+.whatsapp-button svg {
+
+  width: 17px;
+
+  height: 17px;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  position: relative;
+
+  min-height: 590px;
+
+  overflow: hidden;
+
+  background: #fffefa;
+}
+
+
+/* DECORATIVE CORNERS */
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+
+  height: 260px;
+
+  left: -115px;
+
+  top: -125px;
+
+  background: var(--teal);
+
+  border-radius: 50%;
+
+  opacity: .96;
+}
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  right: -80px;
+
+  top: -80px;
+
+  background: var(--yellow);
+
+  border-radius: 50%;
+}
+
+
+/* HERO INNER */
+
+.hero-inner {
+
+  max-width: 1250px;
+
+  min-height: 590px;
+
+  margin: auto;
+
+  padding: 72px 45px 65px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* SMALL LABEL */
+
+.eyebrow {
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #195b59;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+
+/* HERO HEADING */
+
+.hero-title {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: clamp(62px, 6vw, 86px);
+
+  line-height: .94;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 25px;
+
+  color: var(--brown);
+}
+
+.hero-title .new {
+
+  color: var(--teal);
+}
+
+.hero-title .adventures {
+
+  color: var(--coral);
+}
+
+
+/* HANDWRITTEN LINE */
+
+.hero-script {
+
+  font-family: "Caveat", cursive;
+
+  font-size: clamp(28px, 3vw, 38px);
+
+  line-height: 1.05;
+
+  color: #2e2927;
+
+  margin-bottom: 21px;
+
+  max-width: 600px;
+}
+
+.hero-script span {
+
+  color: var(--coral);
+
+  font-size: 1.1em;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+
+  max-width: 590px;
+
+  color: #655f5b;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 22px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: .2s ease;
+}
+
+.primary-button {
+
+  background: var(--teal);
+
+  color: white;
+
+  border: 2px solid var(--teal);
+}
+
+.primary-button:hover {
+
+  background: var(--teal-dark);
+
+  border-color: var(--teal-dark);
+
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+
+  border: 2px solid #8ab5b2;
+
+  color: #245c59;
+
+  background: white;
+}
+
+.secondary-button:hover {
+
+  background: var(--soft-green);
+}
+
+
+/* HERO FEATURES */
+
+.hero-features {
+
+  display: flex;
+
+  gap: 22px;
+
+  margin-top: 26px;
+
+  font-size: 11px;
+
+  color: #615b56;
+
+  flex-wrap: wrap;
+}
+
+.hero-feature {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.hero-feature .heart {
+
+  color: var(--coral);
+}
+
+.hero-feature .book {
+
+  color: var(--teal);
+}
+
+.hero-feature .leaf {
+
+  color: var(--green);
+}
+
+
+/* =========================================================
+   HERO LOGO AREA
+========================================================= */
+
+.hero-visual {
+
+  position: relative;
+
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* DECORATIVE SHAPES BEHIND LOGO */
+
+.logo-decor {
+
+  position: absolute;
+
+  width: 410px;
+
+  height: 410px;
+
+  border-radius: 50%;
+
+  background: #e7f5ed;
+
+  transform: translate(12px, 8px);
+
+  z-index: 0;
+}
+
+.logo-blob-one {
+
+  position: absolute;
+
+  width: 105px;
+
+  height: 105px;
+
+  background: #bde4dd;
+
+  border-radius: 50%;
+
+  right: 38px;
+
+  top: 48px;
+
+  z-index: 0;
+}
+
+.logo-blob-two {
+
+  position: absolute;
+
+  width: 75px;
+
+  height: 75px;
+
+  background: #fff0bb;
+
+  border-radius: 50%;
+
+  left: 70px;
+
+  bottom: 45px;
+
+  z-index: 0;
+}
+
+
+/* ACTUAL LOGO */
+
+.hero-logo {
+
+  width: min(430px, 90%);
+
+  position: relative;
+
+  z-index: 3;
+
+  object-fit: contain;
+
+  filter: none;
+
+  box-shadow: none;
+}
+
+
+/* FLOATING DECOR */
+
+.decor-heart-one {
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 75px;
+
+  color: #c9514d;
+
+  font-size: 28px;
+
+  z-index: 4;
+}
+
+.decor-heart-two {
+
+  position: absolute;
+
+  left: 60px;
+
+  top: 145px;
+
+  color: #e67a69;
+
+  font-size: 20px;
+
+  z-index: 4;
+}
+
+.decor-star {
+
+  position: absolute;
+
+  right: 85px;
+
+  bottom: 80px;
+
+  color: #d9a333;
+
+  font-size: 22px;
+
+  z-index: 4;
+}
+
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.section {
+
+  padding: 85px 25px;
+}
+
+.section-inner {
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.section-heading {
+
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: clamp(42px, 5vw, 60px);
+
+  color: var(--brown);
+
+  line-height: 1;
+}
+
+.section-heading p {
+
+  margin-top: 12px;
+
+  color: #716a65;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SHOP BY AGE
+========================================================= */
+
+.age-section {
+
+  background: linear-gradient(
+    135deg,
+    #f0fbf7 0%,
+    #fffaf0 50%,
+    #fff3f1 100%
+  );
+}
+
+.age-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 13px;
+}
+
+.age-card {
+
+  min-height: 190px;
+
+  border-radius: 25px;
+
+  padding: 20px 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,.9);
+
+  transition: .25s ease;
+
+  text-decoration: none;
+}
+
+.age-card:hover {
+
+  transform: translateY(-7px);
+
+  box-shadow: var(--shadow);
+}
+
+.age-card:nth-child(1) {
+  background: #e4f6ed;
+}
+
+.age-card:nth-child(2) {
+  background: #ffe9ef;
+}
+
+.age-card:nth-child(3) {
+  background: #fff1bf;
+}
+
+.age-card:nth-child(4) {
+  background: #e8f4d8;
+}
+
+.age-card:nth-child(5) {
+  background: #dceefa;
+}
+
+.age-card:nth-child(6) {
+  background: #f0e7fa;
+}
+
+.age-card:nth-child(7) {
+  background: #fff0dc;
+}
+
+.age-icon {
+
+  font-size: 48px;
+
+  margin-bottom: 10px;
+}
+
+.age-card h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.age-card p {
+
+  font-size: 11px;
+
+  color: #665e59;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   BOOK TYPE
+========================================================= */
+
+.type-section {
+
+  background: white;
+}
+
+.type-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.type-card {
+
+  padding: 32px 25px;
+
+  border-radius: 24px;
+
+  text-decoration: none;
+
+  border: 1px solid var(--border);
+
+  transition: .2s ease;
+
+  background: #fff;
+}
+
+.type-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow);
+}
+
+.type-card:nth-child(1) {
+  border-top: 5px solid var(--teal);
+}
+
+.type-card:nth-child(2) {
+  border-top: 5px solid var(--coral);
+}
+
+.type-card:nth-child(3) {
+  border-top: 5px solid var(--yellow);
+}
+
+.type-card:nth-child(4) {
+  border-top: 5px solid var(--green);
+}
+
+.type-card .type-icon {
+
+  font-size: 35px;
+
+  margin-bottom: 14px;
+}
+
+.type-card h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: 27px;
+}
+
+.type-card p {
+
+  font-size: 12px;
+
+  color: #756d68;
+
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   SHOP
+========================================================= */
+
+.shop-section {
+
+  background: #f7fbf8;
+}
+
+.shop-controls {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+
+  flex-wrap: wrap;
+}
+
+.search-box {
+
+  flex: 1;
+
+  min-width: 230px;
+
+  position: relative;
+}
+
+.search-box input {
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: 1px solid #dcd6cf;
+
+  border-radius: 999px;
+
+  background: white;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.search-box input:focus {
+
+  border-color: var(--teal);
+}
+
+.filter-buttons {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.filter-button {
+
+  border: 1px solid #d9d1ca;
+
+  background: white;
+
+  border-radius: 999px;
+
+  padding: 9px 15px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.filter-button.active {
+
+  background: var(--teal);
+
+  border-color: var(--teal);
+
+  color: white;
+}
+
+
+/* =========================================================
+   SORTING
+========================================================= */
+
+.sort-box {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.sort-box label {
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #5e5752;
+}
+
+.sort-box select {
+
+  padding: 10px 38px 10px 14px;
+
+  border: 1px solid #d9d1ca;
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: #342a27;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.sort-box select:focus {
+
+  border-color: var(--teal);
+}
+
+
+/* BOOK GRID */
+
+.book-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.book-card {
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 1px solid #e9e2da;
+
+  transition: .25s ease;
+}
+
+.book-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow);
+}
+
+.book-image {
+
+  aspect-ratio: 4 / 5;
+
+  background: #f0eee9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.book-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.book-placeholder {
+
+  font-size: 45px;
+
+  opacity: .45;
+}
+
+.book-info {
+
+  padding: 18px;
+}
+
+.book-info h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: 22px;
+
+  line-height: 1.15;
+}
+
+.book-author {
+
+  font-size: 11px;
+
+  color: #7a716b;
+
+  margin: 4px 0 10px;
+}
+
+.book-meta {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  align-items: center;
+
+  margin-bottom: 13px;
+}
+
+.book-price {
+
+  font-weight: 700;
+
+  color: var(--teal-dark);
+
+  font-size: 15px;
+}
+
+.book-tag {
+
+  font-size: 9px;
+
+  background: #edf5ee;
+
+  color: #47704c;
+
+  border-radius: 999px;
+
+  padding: 4px 8px;
+}
+
+.book-condition {
+
+  font-size: 10px;
+
+  color: #756d68;
+
+  margin-bottom: 12px;
+}
+
+.order-book {
+
+  display: block;
+
+  text-align: center;
+
+  background: var(--coral);
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  padding: 10px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.order-book:hover {
+
+  background: var(--coral-dark);
+}
+
+.no-books {
+
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 50px;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   NEW IN
+========================================================= */
+
+.new-section {
+
+  background: linear-gradient(
+    120deg,
+    #fff7e0,
+    #fff1f0
+  );
+}
+
+.new-inner {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.new-copy h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(45px, 5vw, 65px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.new-copy h2 span {
+
+  color: var(--coral);
+}
+
+.new-copy p {
+
+  margin: 18px 0 25px;
+
+  color: #665e59;
+
+  font-size: 14px;
+
+  max-width: 500px;
+}
+
+.new-art {
+
+  min-height: 300px;
+
+  border-radius: 40px;
+
+  background: #e3f5ed;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 100px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.new-art::before {
+
+  content: "";
+
+  width: 180px;
+
+  height: 180px;
+
+  background: #f6c84c;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  right: -50px;
+
+  top: -50px;
+}
+
+.new-art::after {
+
+  content: "";
+
+  width: 150px;
+
+  height: 150px;
+
+  background: #f29a91;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: -50px;
+
+  bottom: -50px;
+}
+
+.new-art span {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   OUR STORY
+========================================================= */
+
+.story-section {
+
+  background: white;
+}
+
+.story-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.story-copy h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(45px, 5vw, 65px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.story-copy h2 span {
+
+  color: var(--teal);
+}
+
+.story-copy p {
+
+  margin-top: 18px;
+
+  font-size: 14px;
+
+  color: #6d6661;
+
+  line-height: 1.9;
+}
+
+.story-note {
+
+  margin-top: 22px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 30px;
+
+  color: var(--coral);
+}
+
+.story-box {
+
+  background: #f2faf5;
+
+  border-radius: 35px;
+
+  padding: 45px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.story-box::before {
+
+  content: "♡";
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 10px;
+
+  font-size: 80px;
+
+  color: rgba(21,158,155,.12);
+}
+
+.story-box h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+}
+
+.story-box ul {
+
+  list-style: none;
+
+  margin-top: 20px;
+}
+
+.story-box li {
+
+  padding: 9px 0;
+
+  font-size: 13px;
+
+  border-bottom: 1px dashed #cbded5;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section {
+
+  background: linear-gradient(
+    135deg,
+    #e9f7f4,
+    #fff8e8
+  );
+}
+
+.steps {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.step {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,.8);
+}
+
+.step-number {
+
+  width: 46px;
+
+  height: 46px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: var(--teal);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.step h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: 25px;
+}
+
+.step p {
+
+  font-size: 12px;
+
+  color: #716963;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================================
+   CONTACT / WHATSAPP
+========================================================= */
+
+.contact-section {
+
+  padding: 80px 25px;
+
+  background: #173f3c;
+
+  color: white;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.contact-section::before {
+
+  content: "";
+
+  width: 300px;
+
+  height: 300px;
+
+  background: var(--teal);
+
+  opacity: .25;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: -120px;
+
+  top: -130px;
+}
+
+.contact-section h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(45px, 5vw, 65px);
+
+  font-weight: 400;
+
+  position: relative;
+}
+
+.contact-section p {
+
+  margin: 12px auto 25px;
+
+  max-width: 550px;
+
+  font-size: 14px;
+
+  opacity: .85;
+
+  position: relative;
+}
+
+.contact-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: white;
+
+  color: #174b48;
+
+  padding: 14px 25px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+  position: relative;
+}
+
+.contact-button svg {
+
+  width: 19px;
+
+  height: 19px;
+
+  fill: currentColor;
+}
+
+.instagram-contact {
+
+  margin-top: 20px;
+
+  font-size: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  position: relative;
+}
+
+.instagram-contact svg {
+
+  width: 18px;
+
+  height: 18px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  background: #25211f;
+
+  color: white;
+
+  padding: 55px 25px 30px;
+}
+
+.footer-inner {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr 1fr;
+
+  gap: 50px;
+}
+
+.footer-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.footer-brand img {
+
+  width: 75px;
+
+  height: 75px;
+
+  object-fit: contain;
+}
+
+.footer-brand h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.footer-column h4 {
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+
+  color: #f2c75b;
+}
+
+.footer-column a {
+
+  display: block;
+
+  text-decoration: none;
+
+  color: #ddd6d0;
+
+  font-size: 12px;
+
+  margin: 8px 0;
+}
+
+.footer-column a:hover {
+
+  color: white;
+}
+
+.footer-bottom {
+
+  max-width: 1150px;
+
+  margin: 40px auto 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.12);
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #aaa29c;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-button {
+
+  display: none;
+
+  border: 0;
+
+  background: none;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .nav {
+
+    gap: 14px;
+  }
+
+  .age-grid {
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .book-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .top-bar-inner {
+
+    justify-content: center;
+  }
+
+  .top-social {
+
+    display: none;
+  }
+
+  .header-inner {
+
+    min-height: 75px;
+
+    padding: 8px 18px;
+  }
+
+  .brand img {
+
+    width: 55px;
+
+    height: 55px;
+  }
+
+  .brand-name {
+
+    font-size: 19px;
+  }
+
+  .nav {
+
+    display: none;
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 75px;
+
+    background: white;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+
+    display: flex;
+  }
+
+  .menu-button {
+
+    display: block;
+  }
+
+  .hero-inner {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 65px 25px 50px;
+  }
+
+  .hero-description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+
+    justify-content: center;
+  }
+
+  .hero-features {
+
+    justify-content: center;
+  }
+
+  .hero-visual {
+
+    min-height: 360px;
+
+    order: -1;
+  }
+
+  .hero-logo {
+
+    width: 340px;
+  }
+
+  .logo-decor {
+
+    width: 320px;
+
+    height: 320px;
+  }
+
+  .type-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .new-inner,
+  .story-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .hero-title {
+
+    font-size: 57px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-script {
+
+    font-size: 30px;
+  }
+
+  .hero {
+
+    min-height: auto;
+  }
+
+  .hero-inner {
+
+    min-height: auto;
+  }
+
+  .hero-visual {
+
+    min-height: 310px;
+  }
+
+  .hero-logo {
+
+    width: 290px;
+  }
+
+  .logo-decor {
+
+    width: 270px;
+
+    height: 270px;
+  }
+
+  .age-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .type-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+
+    justify-content: center;
+  }
+
+  .top-bar {
+
+    font-size: 10px;
+  }
+
+  .sort-box {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   SHOPPING CART + STOCK
+========================================================= */
+
+.cart-button {
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #159e9b;
+  color: #fff;
+  font: 600 13px Poppins, sans-serif;
+  white-space: nowrap;
+}
+
+.cart-icon {
+  font-size: 16px;
+}
+
+.cart-count {
+  min-width: 21px;
+  height: 21px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #fff;
+  color: #159e9b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.book-stock {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+  font: 600 12px Poppins, sans-serif;
+}
+
+.book-stock.in-stock {
+  color: #2f7d4a;
+}
+
+.book-stock.out-of-stock {
+  color: #b44b4b;
+}
+
+.stock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.add-to-cart {
+  width: 100%;
+  margin-top: 12px;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #f4c84b;
+  color: #27302f;
+  font: 700 13px Poppins, sans-serif;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.add-to-cart:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.add-to-cart:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+  background: #e5e5e5;
+  color: #777;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.28);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+  z-index: 9998;
+}
+
+.cart-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(430px, 92vw);
+  height: 100vh;
+  background: #fff;
+  box-shadow: -12px 0 35px rgba(0,0,0,.16);
+  transform: translateX(100%);
+  transition: transform .25s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h2 {
+  margin: 0 0 3px;
+  font: 400 26px 'DM Serif Display', serif;
+}
+
+.cart-header span {
+  font: 500 12px Poppins, sans-serif;
+  color: #777;
+}
+
+.cart-close {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.cart-empty {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #777;
+  font: 500 14px Poppins, sans-serif;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 62px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+  width: 62px;
+  height: 76px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f6f3ed;
+  display: grid;
+  place-items: center;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-image .book-placeholder {
+  font-size: 25px;
+}
+
+.cart-item-title {
+  margin: 0 0 4px;
+  font: 600 14px Poppins, sans-serif;
+}
+
+.cart-item-price {
+  font: 600 13px Poppins, sans-serif;
+}
+
+.cart-remove {
+  border: 0;
+  background: transparent;
+  color: #b44b4b;
+  cursor: pointer;
+  font: 600 11px Poppins, sans-serif;
+}
+
+.cart-footer {
+  padding: 18px 20px 22px;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+.cart-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font: 600 15px Poppins, sans-serif;
+}
+
+.cart-total-row strong {
+  font-size: 18px;
+}
+
+.cart-whatsapp {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: #159e9b;
+  color: #fff;
+  font: 700 13px Poppins, sans-serif;
+}
+
+.cart-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.cart-whatsapp:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.cart-clear {
+  width: 100%;
+  margin-top: 9px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #777;
+  font: 500 12px Poppins, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .cart-button {
+    margin-top: 8px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+
+  outline: 3px solid rgba(21,158,155,.35);
+
+  outline-offset: 3px;
+}
+
+
+
+/* =========================================================
+   FREE SHIPPING RUNNING BANNER
+========================================================= */
+.free-shipping-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #1f9d8b;
+  color: #fff;
+  white-space: nowrap;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.free-shipping-track {
+  display: inline-flex;
+  min-width: max-content;
+  animation: lbnShippingScroll 18s linear infinite;
+}
+.free-shipping-track span {
+  padding: 9px 42px;
+}
+@keyframes lbnShippingScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =========================================================
+   STOCK POPUP
+========================================================= */
+.stock-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 45, 40, .42);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10050;
+  padding: 20px;
+}
+.stock-popup-overlay.open { display: flex; }
+.stock-popup {
+  width: min(440px, 100%);
+  background: #fff;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+.stock-popup-icon { font-size: 38px; margin-bottom: 8px; }
+.stock-popup h3 { margin: 0 0 8px; }
+.stock-popup p { margin: 0 0 20px; line-height: 1.6; }
+.stock-popup button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 24px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  background: #1f9d8b;
+  color: #fff;
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+.reviews-section { background: #fff; }
+.reviews-intro { max-width: 720px; margin: 0 auto 30px; text-align: center; }
+.review-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid rgba(31,157,139,.16);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 8px 28px rgba(40,70,60,.06);
+}
+.review-stars { letter-spacing: 2px; margin-bottom: 10px; }
+.review-text { line-height: 1.7; margin: 0 0 12px; }
+.review-name { font-weight: 700; }
+.review-empty { text-align:center; padding:30px 10px; opacity:.75; }
+.review-screenshots {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.review-screenshot-card {
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(31,157,139,.14);
+  box-shadow:0 8px 28px rgba(40,70,60,.06);
+}
+.review-screenshot-card img { display:block; width:100%; height:auto; }
+.review-screenshot-caption { padding:12px 15px; font-family:Poppins,sans-serif; font-size:13px; }
+
+/* =========================================================
+   CART STOCK MESSAGE
+========================================================= */
+.cart-stock-note {
+  margin-top: 10px;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  opacity: .72;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- FREE SHIPPING BANNER -->
+<div class="free-shipping-banner" aria-label="Free shipping offer">
+  <div class="free-shipping-track">
+    <span>FREE SHIPPING ON ORDERS ABOVE ₹1,299 ✦</span>
+    <span>FREE SHIPPING ON ORDERS ABOVE ₹1,299 ✦</span>
+    <span>FREE SHIPPING ON ORDERS ABOVE ₹1,299 ✦</span>
+    <span>FREE SHIPPING ON ORDERS ABOVE ₹1,299 ✦</span>
+  </div>
+</div>
+
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-bar">
+
+  <div class="top-bar-inner">
+
+    <span>♡ Pre-Loved Books</span>
+
+    <span class="dot">•</span>
+
+    <span>📚 Carefully Chosen</span>
+
+    <span class="dot">•</span>
+
+    <span>✦ New Adventures</span>
+
+
+    <div class="top-social">
+
+      <!-- INSTAGRAM ICON -->
+
+      <a
+        href="https://www.instagram.com/littlebooknestco/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Little Book Nest Co. on Instagram"
+      >
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5">
+          </rect>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="4">
+          </circle>
+
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="1"
+            fill="currentColor"
+            stroke="none">
+          </circle>
+
+        </svg>
+
+        @littlebooknestco
+
+      </a>
+
+
+      <span class="dot">•</span>
+
+
+      <!-- WHATSAPP ICON -->
+
+      <a
+        href="https://wa.me/918004663110"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contact Little Book Nest Co. on WhatsApp"
+      >
+
+        <svg
+          class="whatsapp-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Zm-8.4 18c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.6 9.6 0 0 1-1.5-5.1C2.4 6.4 6.8 2 12.1 2c2.6 0 5 1 6.8 2.8a9.5 9.5 0 0 1 2.8 6.8c0 5.4-4.3 9.9-9.6 9.9Zm5.3-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.1-.3-.5.3-.5.8-1.7.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.1 3.2 5.1 4.5.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+
+        </svg>
+
+        8004663110
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="main-header">
+
+  <div class="header-inner">
+
+
+    <a href="#home" class="brand">
+
+      <img
+        src="logo.png"
+        alt="Little Book Nest Co. logo"
+      >
+
+      <span class="brand-name">
+        Little Book Nest<br>
+        Co.
+      </span>
+
+    </a>
+
+
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
+    <nav class="nav" id="mainNav">
+
+      <a href="#home">Home</a>
+
+      <a href="#shop">Shop</a>
+
+      <a href="#age">By Age</a>
+
+      <a href="#type">By Type</a>
+
+      <a href="#new">New In ✦</a>
+
+      <a href="#story">Our Story</a>
+
+      <a href="#how">How It Works</a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/918004663110"
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-button"
+      >
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Z"/>
+
+        </svg>
+
+        WhatsApp
+
+      </a>
+
+
+      <!-- CART -->
+
+      <button
+        type="button"
+        class="cart-button"
+        onclick="toggleCart()"
+        aria-label="Open shopping cart"
+      >
+
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+
+        Cart
+
+        <span class="cart-count" id="cartCount">0</span>
+
+      </button>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        A LITTLE NEST FOR EVERY KIND OF READER
+      </div>
+
+
+      <h1 class="hero-title">
+
+        Loved Books.<br>
+
+        <span class="new">New</span>
+        <span class="adventures"> Adventures.</span>
+
+      </h1>
+
+
+      <div class="hero-script">
+
+        Pre-loved books finding their way into
+        new hands. <span>♥</span>
+
+      </div>
+
+
+      <p class="hero-description">
+
+        Discover carefully chosen pre-loved books for
+        tiny readers, growing readers, teens, young adults
+        and curious minds of every age.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#shop"
+          class="primary-button"
+        >
+          📖 &nbsp; Shop the Nest →
+        </a>
+
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          rel="noopener"
+          class="secondary-button"
+        >
+          ♡ &nbsp; WhatsApp Us
+        </a>
+
+      </div>
+
+
+      <div class="hero-features">
+
+        <span class="hero-feature">
+          <span class="heart">♥</span>
+          Great Stories
+        </span>
+
+        <span class="hero-feature">
+          <span class="book">▣</span>
+          Better Together
+        </span>
+
+        <span class="hero-feature">
+          <span class="leaf">❧</span>
+          A Greener Choice
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- LOGO -->
+
+    <div class="hero-visual">
+
+      <div class="logo-decor"></div>
+
+      <div class="logo-blob-one"></div>
+
+      <div class="logo-blob-two"></div>
+
+
+      <div class="decor-heart-one">
+        ♥
+      </div>
+
+      <div class="decor-heart-two">
+        ♥
+      </div>
+
+      <div class="decor-star">
+        ✦
+      </div>
+
+
+      <img
+        src="logo.png"
+        class="hero-logo"
+        alt="Little Book Nest Co."
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP BY AGE
+========================================================= -->
+
+<section
+  class="section age-section"
+  id="age"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>Find Their Little Nest</h2>
+
+      <p>
+        Books for every stage of the reading journey.
+      </p>
+
+    </div>
+
+
+    <div class="age-grid">
+
+
+      <!-- CHICK -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Tiny Readers"
+      >
+
+        <div class="age-icon">🐥</div>
+
+        <h3>Tiny Readers</h3>
+
+        <p>0–2 years</p>
+
+      </a>
+
+
+      <!-- RABBIT -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Toddler Tales"
+      >
+
+        <div class="age-icon">🐰</div>
+
+        <h3>Toddler Tales</h3>
+
+        <p>2–4 years</p>
+
+      </a>
+
+
+      <!-- FOX -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Story Time Stars"
+      >
+
+        <div class="age-icon">🦊</div>
+
+        <h3>Story Time Stars</h3>
+
+        <p>4–6 years</p>
+
+      </a>
+
+
+      <!-- HEDGEHOG -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Early Adventurers"
+      >
+
+        <div class="age-icon">🦔</div>
+
+        <h3>Early Adventurers</h3>
+
+        <p>6–8 years</p>
+
+      </a>
+
+
+      <!-- OTTER -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Young Readers"
+      >
+
+        <div class="age-icon">🦦</div>
+
+        <h3>Young Readers</h3>
+
+        <p>8–12 years</p>
+
+      </a>
+
+
+      <!-- RACCOON -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Teen Reads"
+      >
+
+        <div class="age-icon">🦝</div>
+
+        <h3>Teen Reads</h3>
+
+        <p>13–17 years</p>
+
+      </a>
+
+
+      <!-- PANDA -->
+
+      <a
+        href="#shop"
+        class="age-card"
+        data-filter-age="Young Adult"
+      >
+
+        <div class="age-icon">🐼</div>
+
+        <h3>Young Adult</h3>
+
+        <p>18+ years</p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP BY TYPE
+========================================================= -->
+
+<section
+  class="section type-section"
+  id="type"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>Choose Your Kind of Story</h2>
+
+      <p>
+        From treasured tales to curious minds.
+      </p>
+
+    </div>
+
+
+    <div class="type-grid">
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Pre-Loved Fiction"
+      >
+
+        <div class="type-icon">📚</div>
+
+        <h3>Pre-Loved Fiction</h3>
+
+        <p>
+          Stories, adventures, mysteries,
+          fantasy and everything in between.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Pre-Loved Non-Fiction"
+      >
+
+        <div class="type-icon">🔎</div>
+
+        <h3>Pre-Loved Non-Fiction</h3>
+
+        <p>
+          Knowledge, discovery, science,
+          history and curious minds.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Young Adult"
+      >
+
+        <div class="type-icon">✨</div>
+
+        <h3>Young Adult</h3>
+
+        <p>
+          18+ reads for grown-up readers
+          who still love a good story.
+        </p>
+
+      </a>
+
+
+      <a
+        href="#shop"
+        class="type-card"
+        data-filter-type="Book Bundles"
+      >
+
+        <div class="type-icon">🎁</div>
+
+        <h3>Book Bundles</h3>
+
+        <p>
+          Curated collections made for
+          little and big book lovers.
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHOP
+========================================================= -->
+
+<section
+  class="section shop-section"
+  id="shop"
+>
+
+  <div class="section-inner">
+
+
+    <div class="section-heading">
+
+      <h2>Shop the Nest</h2>
+
+      <p>
+        Every book is waiting for its next adventure.
+      </p>
+
+    </div>
+
+
+    <div class="shop-controls">
+
+
+      <div class="search-box">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search by title, author or keyword..."
+          oninput="filterBooks()"
+        >
+
+      </div>
+
+
+      <div class="filter-buttons">
+
+        <button
+          class="filter-button active"
+          onclick="setFilter('all', this)"
+        >
+          All Books
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('fiction', this)"
+        >
+          Fiction
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('nonfiction', this)"
+        >
+          Non-Fiction
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('youngadult', this)"
+        >
+          Young Adult
+        </button>
+
+        <button
+          class="filter-button"
+          onclick="setFilter('new', this)"
+        >
+          New In
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- SORT -->
+
+    <div class="sort-box">
+
+      <label for="sortSelect">
+        Sort by:
+      </label>
+
+      <select
+        id="sortSelect"
+        onchange="sortBooks()"
+      >
+
+        <option value="default">
+          Recommended
+        </option>
+
+        <option value="price-low">
+          Price: Low → High
+        </option>
+
+        <option value="price-high">
+          Price: High → Low
+        </option>
+
+        <option value="title-az">
+          Title: A → Z
+        </option>
+
+        <option value="title-za">
+          Title: Z → A
+        </option>
+
+        <option value="condition-az">
+          Condition: Excellent → Fair
+        </option>
+
+        <option value="condition-za">
+          Condition: Fair → Excellent
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div
+      class="book-grid"
+      id="bookGrid"
+    >
+
+      <div class="no-books">
+
+        <p>
+          Our newest books are being added to the Nest.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          rel="noopener"
+          class="primary-button"
+        >
+          Ask us on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     REVIEWS
+========================================================= -->
+
+<section class="section reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="reviews-intro">
+      <h2>Little readers, happy hearts. ♡</h2>
+      <p>See what our customers have to say about their Little Book Nest finds.</p>
+      <div class="review-actions">
+        <a href="#" id="leaveReviewButton" class="primary-button" target="_blank" rel="noopener">Leave a Review</a>
+      </div>
+    </div>
+
+    <div id="customerReviews" class="review-grid">
+      <div class="review-empty">Customer reviews will appear here.</div>
+    </div>
+
+    <div style="height:42px"></div>
+
+    <div class="reviews-intro">
+      <h3>What our readers shared with us</h3>
+      <p>Customer chat screenshots and messages.</p>
+    </div>
+
+    <div id="reviewScreenshots" class="review-screenshots">
+      <div class="review-empty">Your shared review screenshots will appear here.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     NEW IN
+========================================================= -->
+
+<section
+  class="section new-section"
+  id="new"
+>
+
+  <div class="section-inner">
+
+    <div class="new-inner">
+
+
+      <div class="new-copy">
+
+        <h2>
+          Fresh arrivals.<br>
+          <span>New adventures.</span>
+        </h2>
+
+        <p>
+
+          New books are added regularly, so there is
+          always another little treasure waiting to be found.
+
+        </p>
+
+
+        <a
+          href="#shop"
+          class="primary-button"
+        >
+          Explore New In →
+        </a>
+
+      </div>
+
+
+      <div class="new-art">
+
+        <span>📚</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR STORY
+========================================================= -->
+
+<section
+  class="section story-section"
+  id="story"
+>
+
+  <div class="section-inner">
+
+    <div class="story-grid">
+
+
+      <div class="story-copy">
+
+        <h2>
+          A little nest<br>
+          <span>for every reader.</span>
+        </h2>
+
+
+        <p>
+
+          Little Book Nest Co. is a home for books
+          that still have stories left to tell.
+
+          <br><br>
+
+          We carefully choose pre-loved books and
+          give them a chance to find new hands,
+          new shelves and new adventures.
+
+        </p>
+
+
+        <div class="story-note">
+
+          Loved books deserve another adventure. ♥
+
+        </div>
+
+      </div>
+
+
+      <div class="story-box">
+
+        <h3>
+          Why pre-loved?
+        </h3>
+
+
+        <ul>
+
+          <li>♡ Beautiful books without the brand-new price tag</li>
+
+          <li>📚 Give favourite stories another home</li>
+
+          <li>🌱 A more thoughtful way to build a library</li>
+
+          <li>✨ Discover titles you may not have expected</li>
+
+          <li>♥ Carefully chosen with readers in mind</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section
+  class="section how-section"
+  id="how"
+>
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>How It Works</h2>
+
+      <p>
+        Finding a book should be simple.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">1</div>
+
+        <h3>Browse</h3>
+
+        <p>
+          Explore our latest pre-loved books
+          by age or type.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">2</div>
+
+        <h3>Choose</h3>
+
+        <p>
+          Find a book that feels like
+          it belongs in your nest.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">3</div>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          Tap the WhatsApp button and
+          send us your book request.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">4</div>
+
+        <h3>Adventure</h3>
+
+        <p>
+          We arrange your order and
+          your book begins its next chapter.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  class="contact-section"
+>
+
+  <h2>Let's Find Some Stories</h2>
+
+  <p>
+    Looking for something specific?
+    Need help choosing a book?
+    We'd love to help.
+  </p>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/918004663110"
+    target="_blank"
+    rel="noopener"
+    class="contact-button"
+  >
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Z"/>
+
+    </svg>
+
+    Chat on WhatsApp
+
+  </a>
+
+
+  <!-- INSTAGRAM -->
+
+  <a
+    href="https://www.instagram.com/littlebooknestco/"
+    target="_blank"
+    rel="noopener"
+    class="instagram-contact"
+  >
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5">
+      </rect>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="4">
+      </circle>
+
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        fill="currentColor"
+        stroke="none">
+      </circle>
+
+    </svg>
+
+    @littlebooknestco
+
+  </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-brand">
+
+        <img
+          src="logo.png"
+          alt="Little Book Nest Co."
+        >
+
+        <h3>
+          Little Book Nest<br>
+          Co.
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Explore</h4>
+
+      <a href="#home">Home</a>
+
+      <a href="#shop">Shop</a>
+
+      <a href="#age">By Age</a>
+
+      <a href="#type">By Type</a>
+
+      <a href="#new">New In</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h4>Connect</h4>
+
+      <a
+        href="https://www.instagram.com/littlebooknestco/"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <!-- INSTAGRAM ICON -->
+
+        <svg
+          viewBox="0 0 24 24"
+          width="14"
+          height="14"
+          style="display:inline-block;vertical-align:-2px;margin-right:5px;fill:none;stroke:currentColor;stroke-width:1.8;"
+        >
+
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5">
+          </rect>
+
+          <circle
+            cx="12"
+            cy="12"
+            r="4">
+          </circle>
+
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="1"
+            fill="currentColor"
+            stroke="none">
+          </circle>
+
+        </svg>
+
+        @littlebooknestco
+
+      </a>
+
+
+      <a
+        href="https://wa.me/918004663110"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <!-- WHATSAPP ICON -->
+
+        <svg
+          viewBox="0 0 24 24"
+          width="14"
+          height="14"
+          style="display:inline-block;vertical-align:-2px;margin-right:5px;fill:currentColor;"
+        >
+
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Zm-8.4 18c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.6 9.6 0 0 1-1.5-5.1C2.4 6.4 6.8 2 12.1 2c2.6 0 5 1 6.8 2.8a9.5 9.5 0 0 1 2.8 6.8c0 5.4-4.3 9.9-9.6 9.9Zm5.3-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.1-.3-.5.3-.5.8-1.7.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.1 3.2 5.1 4.5.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+
+        </svg>
+
+        8004663110
+
+      </a>
+
+
+      <a href="#story">
+        Our Story
+      </a>
+
+      <a href="#how">
+        How It Works
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 Little Book Nest Co. · Loved Books · New Adventures
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+  document
+    .getElementById("mainNav")
+    .classList
+    .toggle("open");
+
+}
+
+
+/* =========================================================
+   GOOGLE SHEET SETTINGS
+========================================================= */
+
+
+/*
+Google Sheet columns:
+
+Title
+Author
+Price
+Age
+Type
+Condition
+Image
+New
+
+Example:
+
+The Gruffalo
+Julia Donaldson
+₹120
+Story Time Stars
+Pre-Loved Fiction
+Very Good
+image-url
+Yes
+*/
+
+
+const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS7kHEJ42CsSnNbaFgyBHVS4XDjspJxW4WM8NIMi_v2ZuUfCj5raTkHGUd18YfnBboRLB0QQeMredDO/pub?output=csv";
+
+/* Reviews setup: publish your Reviews sheet as CSV and paste the URL here.
+   Recommended review columns: Name | Rating | Review | Approved
+   Screenshot columns: Image | Caption | Approved
+   Paste your Google Form link in REVIEW_FORM_URL so customers can submit reviews. */
+const REVIEWS_SHEET_URL = "";
+const REVIEW_FORM_URL = "";
+
+
+
+/* =========================================================
+   SAMPLE BOOKS
+========================================================= */
+
+const sampleBooks = [
+
+  {
+    title: "The Gruffalo",
+    author: "Julia Donaldson",
+    price: "₹120",
+    age: "Story Time Stars",
+    type: "Pre-Loved Fiction",
+    condition: "Very Good",
+    image: "",
+    new: true,
+    stock: "In Stock"
+  },
+
+  {
+    title: "The Very Hungry Caterpillar",
+    author: "Eric Carle",
+    price: "₹150",
+    age: "Toddler Tales",
+    type: "Pre-Loved Fiction",
+    condition: "Excellent",
+    image: "",
+    new: true,
+    stock: "In Stock"
+  },
+
+  {
+    title: "National Geographic Kids",
+    author: "National Geographic",
+    price: "₹180",
+    age: "Young Readers",
+    type: "Pre-Loved Non-Fiction",
+    condition: "Good",
+    image: "",
+    new: false,
+    stock: "In Stock"
+  },
+
+  {
+    title: "A Little Princess",
+    author: "Frances Hodgson Burnett",
+    price: "₹160",
+    age: "Young Adult",
+    type: "Pre-Loved Fiction",
+    condition: "Very Good",
+    image: "",
+    new: true,
+    stock: "In Stock"
+  }
+
+];
+
+
+/* =========================================================
+   BOOK STATE
+========================================================= */
+
+let books = [];
+
+let currentFilter = "all";
+
+let currentSort = "default";
+
+
+/* =========================================================
+   LOAD BOOKS
+========================================================= */
+
+async function loadBooks() {
+
+  if (!GOOGLE_SHEET_URL) {
+
+    books = sampleBooks;
+
+    renderBooks();
+
+    return;
+
+  }
+
+
+  try {
+
+    const response =
+      await fetch(GOOGLE_SHEET_URL);
+
+    const csv =
+      await response.text();
+
+    books =
+      parseCSV(csv);
+
+    refreshCartAgainstStock(books);
+    renderBooks();
+
+  }
+
+  catch(error) {
+
+    console.error(error);
+
+    books = sampleBooks;
+
+    renderBooks();
+
+  }
+
+}
+
+
+/* =========================================================
+   PROPER CSV PARSER
+========================================================= */
+
+
+
+function parseCSVRows(text) {
+  const rows = [];
+  let row = [], cell = "", insideQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i], next = text[i + 1];
+    if (char === '"' && insideQuotes && next === '"') { cell += '"'; i++; }
+    else if (char === '"') { insideQuotes = !insideQuotes; }
+    else if (char === ',' && !insideQuotes) { row.push(cell.trim()); cell = ""; }
+    else if ((char === '\n' || char === '\r') && !insideQuotes) {
+      if (char === '\r' && next === '\n') i++;
+      row.push(cell.trim()); cell = "";
+      if (row.some(value => value !== "")) rows.push(row);
+      row = [];
+    } else { cell += char; }
+  }
+  if (cell || row.length) { row.push(cell.trim()); if (row.some(value => value !== "")) rows.push(row); }
+  return rows;
+}
+
+function parseCSV(text) {
+
+  const rows = [];
+
+  let row = [];
+
+  let cell = "";
+
+  let insideQuotes = false;
+
+
+  for (let i = 0; i < text.length; i++) {
+
+    const char = text[i];
+
+    const next = text[i + 1];
+
+
+    if (char === '"' && insideQuotes && next === '"') {
+
+      cell += '"';
+
+      i++;
+
+    }
+
+    else if (char === '"') {
+
+      insideQuotes = !insideQuotes;
+
+    }
+
+    else if (char === "," && !insideQuotes) {
+
+      row.push(cell.trim());
+
+      cell = "";
+
+    }
+
+    else if ((char === "\n" || char === "\r") && !insideQuotes) {
+
+      if (char === "\r" && next === "\n") {
+
+        i++;
+
+      }
+
+      row.push(cell.trim());
+
+      cell = "";
+
+      if (row.some(value => value !== "")) {
+
+        rows.push(row);
+
+      }
+
+      row = [];
+
+    }
+
+    else {
+
+      cell += char;
+
+    }
+
+  }
+
+
+  if (cell || row.length) {
+
+    row.push(cell.trim());
+
+    if (row.some(value => value !== "")) {
+
+      rows.push(row);
+
+    }
+
+  }
+
+
+  if (!rows.length) {
+
+    return [];
+
+  }
+
+
+  /*
+    The Google Sheet has a title/instruction area above
+    the actual column headings. Find the real header row
+    instead of assuming the first CSV row is the header.
+  */
+
+  const headerIndex =
+    rows.findIndex(row =>
+      row.some(
+        cell =>
+          String(cell)
+            .trim()
+            .toLowerCase() === "title"
+      ) &&
+      row.some(
+        cell =>
+          String(cell)
+            .trim()
+            .toLowerCase() === "author"
+      )
+    );
+
+
+  if (headerIndex === -1) {
+
+    return [];
+
+  }
+
+
+  const headers =
+    rows[headerIndex].map(header =>
+      header
+        .trim()
+        .toLowerCase()
+    );
+
+
+  return rows
+    .slice(headerIndex + 1)
+    .map(row => {
+
+      const book = {};
+
+
+      headers.forEach((header, index) => {
+
+        book[header] =
+          row[index] || "";
+
+      });
+
+
+      return {
+
+        title:
+          book.title || "Untitled Book",
+
+        author:
+          book.author || "",
+
+        price:
+          book.price || "Ask us",
+
+        age:
+          book.age || "",
+
+        type:
+          book.type || "",
+
+        condition:
+          book.condition || "",
+
+        image:
+          book.image || "",
+
+        new:
+          ["yes", "true", "1"]
+            .includes(
+              String(book.new)
+                .toLowerCase()
+                .trim()
+            ),
+
+        stock:
+          String(book.stock || "in stock")
+            .trim(),
+
+        cartKey:
+          `${book.title || ""}::${book.author || ""}::${book.price || ""}`
+      };
+
+    })
+    .filter(book =>
+      book.title !== "Untitled Book" ||
+      book.author ||
+      book.price !== "Ask us" ||
+      book.age ||
+      book.type ||
+      book.condition ||
+      book.image
+    );
+
+}
+
+
+/* =========================================================
+   PRICE NUMBER
+========================================================= */
+
+function getPriceNumber(price) {
+
+  const number =
+    String(price)
+      .replace(/[^\d.]/g, "");
+
+  return parseFloat(number) || 0;
+
+}
+
+
+/* =========================================================
+   SORT BOOKS
+========================================================= */
+
+function sortBooks() {
+
+  currentSort =
+    document
+      .getElementById("sortSelect")
+      .value;
+
+  renderBooks();
+
+}
+
+
+/* =========================================================
+   APPLY SORT
+========================================================= */
+
+function applySort(bookList) {
+
+  const sorted =
+    [...bookList];
+
+
+  if (currentSort === "price-low") {
+
+    sorted.sort(
+      (a, b) =>
+        getPriceNumber(a.price) -
+        getPriceNumber(b.price)
+    );
+
+  }
+
+
+  if (currentSort === "price-high") {
+
+    sorted.sort(
+      (a, b) =>
+        getPriceNumber(b.price) -
+        getPriceNumber(a.price)
+    );
+
+  }
+
+
+  if (currentSort === "title-az") {
+
+    sorted.sort(
+      (a, b) =>
+        a.title.localeCompare(
+          b.title,
+          undefined,
+          { sensitivity: "base" }
+        )
+    );
+
+  }
+
+
+  if (currentSort === "title-za") {
+
+    sorted.sort(
+      (a, b) =>
+        b.title.localeCompare(
+          a.title,
+          undefined,
+          { sensitivity: "base" }
+        )
+    );
+
+  }
+
+
+  /*
+    Condition ranking:
+    Excellent → Very Good → Good → Fair
+  */
+
+  const conditionRank = {
+    "excellent": 1,
+    "very good": 2,
+    "good": 3,
+    "fair": 4
+  };
+
+
+  if (currentSort === "condition-az") {
+
+    sorted.sort(
+      (a, b) => {
+
+        const aRank =
+          conditionRank[
+            String(a.condition).toLowerCase().trim()
+          ] || 99;
+
+        const bRank =
+          conditionRank[
+            String(b.condition).toLowerCase().trim()
+          ] || 99;
+
+        return aRank - bRank;
+
+      }
+    );
+
+  }
+
+
+  if (currentSort === "condition-za") {
+
+    sorted.sort(
+      (a, b) => {
+
+        const aRank =
+          conditionRank[
+            String(a.condition).toLowerCase().trim()
+          ] || 99;
+
+        const bRank =
+          conditionRank[
+            String(b.condition).toLowerCase().trim()
+          ] || 99;
+
+        return bRank - aRank;
+
+      }
+    );
+
+  }
+
+
+  return sorted;
+
+}
+
+
+/* =========================================================
+   CART STATE
+========================================================= */
+
+let cart = [];
+
+try {
+  const savedCart = localStorage.getItem("lbnCart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
+} catch (error) {
+  cart = [];
+}
+
+function isBookInStock(book) {
+  const value = String(book.stock || "in stock")
+    .toLowerCase()
+    .trim();
+
+  return !(
+    value === "out of stock" ||
+    value === "out-of-stock" ||
+    value === "out" ||
+    value === "sold out" ||
+    value === "sold" ||
+    value === "no" ||
+    value === "false" ||
+    value === "0"
+  );
+}
+
+function saveCart() {
+  try {
+    localStorage.setItem("lbnCart", JSON.stringify(cart));
+  } catch (error) {
+    console.warn("Could not save cart", error);
+  }
+}
+
+function updateCartCount() {
+  const count = document.getElementById("cartCount");
+  const summary = document.getElementById("cartSummary");
+
+  if (count) {
+    count.textContent = cart.length;
+  }
+
+  if (summary) {
+    summary.textContent = `${cart.length} ${cart.length === 1 ? "book" : "books"}`;
+  }
+}
+
+function getCartTotal() {
+  return cart.reduce(
+    (total, book) => total + getPriceNumber(book.price),
+    0
+  );
+}
+
+function addToCart(index) {
+  const book = books[index];
+
+  if (!book || !isBookInStock(book)) {
+    return;
+  }
+
+  const alreadyAdded = cart.some(
+    item => item.cartKey === book.cartKey
+  );
+
+  if (alreadyAdded) {
+    toggleCart(true);
+    return;
+  }
+
+  cart.push({ ...book });
+  saveCart();
+  updateCartCount();
+  renderCart();
+  toggleCart(true);
+  renderBooks();
+}
+
+function removeFromCart(cartKey) {
+  cart = cart.filter(
+    book => book.cartKey !== cartKey
+  );
+
+  saveCart();
+  updateCartCount();
+  renderCart();
+  renderBooks();
+}
+
+function clearCart() {
+  cart = [];
+  saveCart();
+  updateCartCount();
+  renderCart();
+  renderBooks();
+}
+
+function toggleCart(open) {
+  const drawer = document.getElementById("cartDrawer");
+  const overlay = document.getElementById("cartOverlay");
+
+  const shouldOpen =
+    typeof open === "boolean"
+      ? open
+      : !drawer.classList.contains("open");
+
+  drawer.classList.toggle("open", shouldOpen);
+  overlay.classList.toggle("open", shouldOpen);
+
+  if (shouldOpen) {
+    renderCart();
+  }
+}
+
+function renderCart() {
+  const container = document.getElementById("cartItems");
+  const total = document.getElementById("cartTotal");
+  const whatsapp = document.getElementById("cartWhatsapp");
+
+  if (!container || !total || !whatsapp) {
+    return;
+  }
+
+  updateCartCount();
+
+  if (!cart.length) {
+    container.innerHTML = `
+      <div class="cart-empty">
+        <div>
+          <div style="font-size:34px;margin-bottom:8px;">📚</div>
+          Your cart is empty.<br>
+          Add some loved books to your Nest!
+        </div>
+      </div>
+    `;
+  } else {
+    container.innerHTML = cart.map(book => {
+      const imageHTML = book.image
+        ? `<img src="${escapeHTML(book.image)}" alt="${escapeHTML(book.title)}">`
+        : `<div class="book-placeholder">📖</div>`;
+
+      return `
+        <div class="cart-item">
+          <div class="cart-item-image">
+            ${imageHTML}
+          </div>
+
+          <div>
+            <p class="cart-item-title">${escapeHTML(book.title)}</p>
+            <div class="cart-item-price">${escapeHTML(book.price)}</div>
+          </div>
+
+          <button
+            type="button"
+            class="cart-remove"
+            data-cart-key="${encodeURIComponent(book.cartKey)}"
+          >
+            Remove
+          </button>
+        </div>
+      `;
+    }).join("");
+  }
+
+  total.textContent = `₹${getCartTotal().toLocaleString("en-IN")}`;
+  whatsapp.disabled = cart.length === 0;
+}
+
+function sendCartToWhatsApp() {
+  if (!cart.length) {
+    return;
+  }
+
+  const lines = cart.map(
+    (book, index) =>
+      `${index + 1}. ${book.title} — ${book.price}`
+  );
+
+  const message = [
+    "Hi Little Book Nest Co.!",
+    "I'd like to order these books:",
+    "",
+    ...lines,
+    "",
+    `Total: ₹${getCartTotal().toLocaleString("en-IN")}`,
+    "",
+    "Please confirm availability and payment details."
+  ].join("\n");
+
+  window.open(
+    `https://wa.me/918004663110?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+}
+
+
+
+
+function matchesCategory(value, category) {
+  const wanted = String(category || "").toLowerCase().trim();
+  if (!wanted) return false;
+  return String(value || "")
+    .split(",")
+    .map(item => item.toLowerCase().trim())
+    .filter(Boolean)
+    .some(item => item === wanted || item.includes(wanted) || wanted.includes(item));
+}
+
+function refreshCartAgainstStock(updatedBooks) {
+  if (!cart.length) return;
+
+  const stockMap = new Map(
+    updatedBooks.map(book => [book.cartKey, book])
+  );
+
+  const removed = [];
+  cart = cart.filter(item => {
+    const latest = stockMap.get(item.cartKey);
+    if (latest && !isBookInStock(latest)) {
+      removed.push(item.title);
+      return false;
+    }
+    return true;
+  });
+
+  if (removed.length) {
+    saveCart();
+    updateCartCount();
+    renderCart();
+    renderBooks();
+    showStockPopup(removed);
+  }
+}
+
+function showStockPopup(titles) {
+  const overlay = document.getElementById("stockPopupOverlay");
+  const message = document.getElementById("stockPopupMessage");
+  if (!overlay || !message) return;
+
+  const list = titles.length === 1
+    ? `“${titles[0]}” is now out of stock and has been removed from your cart.`
+    : `${titles.map(title => `“${title}”`).join(", ")} are now out of stock and have been removed from your cart.`;
+
+  message.textContent = list;
+  overlay.classList.add("open");
+}
+
+function closeStockPopup() {
+  const overlay = document.getElementById("stockPopupOverlay");
+  if (overlay) overlay.classList.remove("open");
+}
+
+async function refreshBookStock() {
+  if (!GOOGLE_SHEET_URL) return;
+  try {
+    const response = await fetch(GOOGLE_SHEET_URL, { cache: "no-store" });
+    const csv = await response.text();
+    const updatedBooks = parseCSV(csv);
+    if (updatedBooks.length) {
+      books = updatedBooks;
+      refreshCartAgainstStock(updatedBooks);
+      renderBooks();
+    }
+  } catch (error) {
+    console.warn("Could not refresh stock", error);
+  }
+}
+
+function setupReviewLinks() {
+  const button = document.getElementById("leaveReviewButton");
+  if (button) {
+    if (REVIEW_FORM_URL) {
+      button.href = REVIEW_FORM_URL;
+    } else {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        alert("The review form is being connected. Please check back soon!");
+      });
+    }
+  }
+}
+
+function renderReviews(data) {
+  const reviewsContainer = document.getElementById("customerReviews");
+  const screenshotsContainer = document.getElementById("reviewScreenshots");
+  if (!reviewsContainer || !screenshotsContainer) return;
+
+  const reviews = data.reviews || [];
+  const screenshots = data.screenshots || [];
+
+  reviewsContainer.innerHTML = reviews.length ? reviews.map(review => {
+    const rating = Math.max(0, Math.min(5, Number(review.rating) || 5));
+    return `<article class="review-card">
+      <div class="review-stars">${"★".repeat(rating)}${"☆".repeat(5-rating)}</div>
+      <p class="review-text">${escapeHTML(review.review)}</p>
+      <div class="review-name">— ${escapeHTML(review.name || "A Little Book Nest customer")}</div>
+    </article>`;
+  }).join("") : `<div class="review-empty">Customer reviews will appear here.</div>`;
+
+  screenshotsContainer.innerHTML = screenshots.length ? screenshots.map(item => `
+    <article class="review-screenshot-card">
+      <img src="${escapeHTML(item.image)}" alt="Customer review screenshot" loading="lazy">
+      ${item.caption ? `<div class="review-screenshot-caption">${escapeHTML(item.caption)}</div>` : ""}
+    </article>
+  `).join("") : `<div class="review-empty">Your shared review screenshots will appear here.</div>`;
+}
+
+async function shareReviewScreenshot(imageUrl, title) {
+  try {
+    if (navigator.share) {
+      await navigator.share({
+        title: title,
+        text: title,
+        url: imageUrl
+      });
+    } else {
+      await navigator.clipboard.writeText(imageUrl);
+      alert("Review image link copied. You can now share it.");
+    }
+  } catch (error) {
+    console.warn("Share cancelled or unavailable", error);
+  }
+}
+
+async function loadReviews() {
+  setupReviewLinks();
+  if (!REVIEWS_SHEET_URL) {
+    renderReviews({ reviews: [], screenshots: [] });
+    return;
+  }
+
+  try {
+    const response = await fetch(REVIEWS_SHEET_URL, { cache: "no-store" });
+    const csv = await response.text();
+    const rows = parseCSVRows(csv);
+    const headerIndex = rows.findIndex(row => row.some(c => String(c).trim().toLowerCase() === "name") && row.some(c => String(c).trim().toLowerCase() === "review"));
+    if (headerIndex === -1) {
+      renderReviews({ reviews: [], screenshots: [] });
+      return;
+    }
+    const headers = rows[headerIndex].map(c => String(c).trim().toLowerCase());
+    const records = rows.slice(headerIndex + 1).map(row => {
+      const obj = {};
+      headers.forEach((h,i) => obj[h] = row[i] || "");
+      return obj;
+    });
+    const approved = records.filter(r => String(r.approved || "yes").toLowerCase().trim() !== "no" && String(r.approved || "yes").toLowerCase().trim() !== "false");
+    renderReviews({
+      reviews: approved.filter(r => r.review).map(r => ({ name: r.name, rating: r.rating, review: r.review })),
+      screenshots: approved.filter(r => r.image).map(r => ({ image: r.image, caption: r.caption }))
+    });
+  } catch (error) {
+    console.warn("Could not load reviews", error);
+    renderReviews({ reviews: [], screenshots: [] });
+  }
+}
+
+/* =========================================================
+   RENDER BOOKS
+========================================================= */
+
+function renderBooks() {
+
+  const grid =
+    document.getElementById("bookGrid");
+
+
+  const search =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  let filtered =
+    books.filter(book => {
+
+
+      const searchable =
+        `${book.title}
+         ${book.author}
+         ${book.age}
+         ${book.type}
+         ${book.condition}`
+        .toLowerCase();
+
+
+      const matchesSearch =
+        searchable.includes(search);
+
+
+      let matchesFilter = true;
+
+
+      if (currentFilter === "fiction") {
+
+        matchesFilter =
+          matchesCategory(book.type, "fiction") &&
+          !matchesCategory(book.type, "non-fiction");
+
+      }
+
+
+      if (currentFilter === "nonfiction") {
+
+        matchesFilter =
+          matchesCategory(book.type, "non-fiction");
+
+      }
+
+
+      if (currentFilter === "youngadult") {
+
+        matchesFilter =
+          matchesCategory(book.age, "young adult");
+
+      }
+
+
+      if (currentFilter === "new") {
+
+        matchesFilter =
+          book.new === true;
+
+      }
+
+
+      return matchesSearch && matchesFilter;
+
+    });
+
+
+  filtered =
+    applySort(filtered);
+
+
+  if (!filtered.length) {
+
+    grid.innerHTML = `
+
+      <div class="no-books">
+
+        <p>
+          We couldn't find that one in the Nest.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/918004663110"
+          target="_blank"
+          rel="noopener"
+          class="primary-button"
+        >
+          Ask us on WhatsApp
+        </a>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  grid.innerHTML =
+    filtered
+      .map(book => createBookCard(book))
+      .join("");
+
+}
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+function createBookCard(book) {
+
+  const cartKey =
+    book.cartKey || `${book.title}::${book.author}::${book.price}`;
+
+  const alreadyInCart = cart.some(
+    item => item.cartKey === cartKey
+  );
+
+  const inStock = isBookInStock(book);
+
+
+  const imageHTML =
+    book.image
+      ? `<img src="${escapeHTML(book.image)}" alt="${escapeHTML(book.title)}">`
+      : `<div class="book-placeholder">📖</div>`;
+
+
+  return `
+
+    <article class="book-card">
+
+      <div class="book-image">
+
+        ${imageHTML}
+
+      </div>
+
+
+      <div class="book-info">
+
+        <h3>
+          ${escapeHTML(book.title)}
+        </h3>
+
+
+        <div class="book-author">
+
+          ${escapeHTML(book.author)}
+
+        </div>
+
+
+        <div class="book-meta">
+
+          <span class="book-price">
+            ${escapeHTML(book.price)}
+          </span>
+
+
+          <span class="book-tag">
+            ${escapeHTML(book.age || "Every reader")}
+          </span>
+
+        </div>
+
+
+        ${
+          book.condition
+            ? `
+              <div class="book-condition">
+                Condition: ${escapeHTML(book.condition)}
+              </div>
+            `
+            : ""
+        }
+
+        <div class="book-stock ${inStock ? "in-stock" : "out-of-stock"}">
+          <span class="stock-dot"></span>
+          ${inStock ? "In Stock" : "Out of Stock"}
+        </div>
+
+        <button
+          type="button"
+          class="add-to-cart"
+          ${!inStock || alreadyInCart ? "disabled" : ""}
+          onclick='addBookToCartFromCard(${JSON.stringify(book).replace(/'/g, "&#39;")})'
+        >
+          ${
+            !inStock
+              ? "Out of Stock"
+              : alreadyInCart
+                ? "✓ Added to Cart"
+                : "Add to Cart"
+          }
+        </button>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+
+function addBookToCartFromCard(book) {
+
+  if (!book || !isBookInStock(book)) {
+    return;
+  }
+
+  book.cartKey =
+    `${book.title}::${book.author}::${book.price}`;
+
+  addToCartByBook(book);
+}
+
+function addToCartByBook(book) {
+
+  const alreadyAdded = cart.some(
+    item => item.cartKey === book.cartKey
+  );
+
+  if (alreadyAdded) {
+    toggleCart(true);
+    return;
+  }
+
+  cart.push({ ...book });
+  saveCart();
+  updateCartCount();
+  renderCart();
+  renderBooks();
+  toggleCart(true);
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+========================================================= */
+
+function escapeHTML(value) {
+
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+function setFilter(filter, button) {
+
+  currentFilter = filter;
+
+
+  document
+    .querySelectorAll(".filter-button")
+    .forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+
+  button.classList.add("active");
+
+
+  renderBooks();
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function filterBooks() {
+
+  renderBooks();
+
+}
+
+
+/* =========================================================
+   AGE CARD FILTERING
+========================================================= */
+
+document
+  .querySelectorAll("[data-filter-age]")
+  .forEach(card => {
+
+    card.addEventListener("click", function() {
+
+      const age =
+        this.dataset.filterAge;
+
+
+      document
+        .getElementById("searchInput")
+        .value = age;
+
+
+      currentFilter = "all";
+
+
+      document
+        .querySelectorAll(".filter-button")
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+
+      document
+        .querySelector(".filter-button")
+        .classList.add("active");
+
+
+      renderBooks();
+
+    });
+
+  });
+
+
+/* =========================================================
+   TYPE CARD FILTERING
+========================================================= */
+
+document
+  .querySelectorAll("[data-filter-type]")
+  .forEach(card => {
+
+    card.addEventListener("click", function() {
+
+      const type =
+        this.dataset.filterType;
+
+
+      document
+        .getElementById("searchInput")
+        .value = type;
+
+
+      currentFilter = "all";
+
+
+      document
+        .querySelectorAll(".filter-button")
+        .forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+
+      document
+        .querySelector(".filter-button")
+        .classList.add("active");
+
+
+      renderBooks();
+
+    });
+
+  });
+
+
+/* =========================================================
+   START
+========================================================= */
+
+loadBooks();
+renderCart();
+loadReviews();
+
+/* Re-check the catalogue regularly so a book that sells while a customer
+   is browsing is automatically removed from their cart. */
+setInterval(refreshBookStock, 60000);
+
+
+
+document.addEventListener("click", function(event) {
+  const button = event.target.closest(".cart-remove[data-cart-key]");
+  if (!button) return;
+
+  const cartKey = decodeURIComponent(button.getAttribute("data-cart-key") || "");
+  if (!cartKey) return;
+
+  removeFromCart(cartKey);
+});
+
+</script>
+
+
+
+<!-- STOCK POPUP -->
+<div class="stock-popup-overlay" id="stockPopupOverlay" role="dialog" aria-modal="true" aria-labelledby="stockPopupTitle">
+  <div class="stock-popup">
+    <div class="stock-popup-icon">📚</div>
+    <h3 id="stockPopupTitle">A book in your cart is now out of stock</h3>
+    <p id="stockPopupMessage">We have removed it from your cart.</p>
+    <button type="button" onclick="closeStockPopup()">Okay</button>
+  </div>
+</div>
+
+<!-- =========================================================
+     CART DRAWER
+========================================================= -->
+
+<div
+  class="cart-overlay"
+  id="cartOverlay"
+  onclick="toggleCart(false)"
+></div>
+
+<aside
+  class="cart-drawer"
+  id="cartDrawer"
+  aria-label="Shopping cart"
+>
+
+  <div class="cart-header">
+
+    <div>
+      <h2>Your Cart</h2>
+      <span id="cartSummary">0 books</span>
+    </div>
+
+    <button
+      type="button"
+      class="cart-close"
+      onclick="toggleCart(false)"
+      aria-label="Close cart"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong id="cartTotal">₹0</strong>
+    </div>
+
+    <button
+      type="button"
+      class="cart-whatsapp"
+      id="cartWhatsapp"
+      onclick="sendCartToWhatsApp()"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.9L.3 24l6.6-1.7a11.7 11.7 0 0 0 5.2 1.2h.1c6.4 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.3Z"/>
+      </svg>
+      Send Cart to WhatsApp
+    </button>
+
+    <button
+      type="button"
+      class="cart-clear"
+      onclick="clearCart()"
+    >
+      Clear Cart
+    </button>
+
+  </div>
+
+</aside>
+
+
+</body>
+
+</html>
